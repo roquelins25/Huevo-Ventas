@@ -1,4 +1,4 @@
-table 'Master Data'
+table 'Productos Grupo'
 	lineageTag: 6026b1bf-7a1b-426b-b423-433567d7fbca
 
 	column Name
@@ -81,7 +81,7 @@ table 'Master Data'
 
 		annotation SummarizationSetBy = Automatic
 
-	partition 'Master Data' = m
+	partition 'Productos Grupo' = m
 		mode: import
 		source = ```
 				let

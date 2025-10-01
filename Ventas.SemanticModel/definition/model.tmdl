@@ -8,12 +8,13 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["DATOS POWER BI","Master Data"]
+annotation PBI_QueryOrder = ["DATOS POWER BI","Productos Grupo","Intercos"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table 'DATOS POWER BI'
-ref table 'Master Data'
+ref table 'Productos Grupo'
+ref table Intercos
 
 ref cultureInfo pt-BR
 
