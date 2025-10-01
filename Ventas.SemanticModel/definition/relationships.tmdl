@@ -1,0 +1,17 @@
+relationship c2b1f368-6905-1246-f6c1-6517e0c33f6a
+	fromColumn: 'DATOS POWER BI'.Fecha
+	toColumn: 'CALENDARIO DAX'.Date
+
+relationship 831e7c67-3332-140d-2476-04b3bc0da2a8
+	fromColumn: 'DATOS POWER BI'.'LINK Producto'
+	toColumn: 'Productos Grupo'.'LINK Producto'
+
+relationship bf468633-e85e-e7dd-10e4-e28ef2bb8d16
+	fromColumn: 'DATOS POWER BI'.'LINK Rappel'
+	toColumn: Intercos.'CALC cliente'
+
+relationship 0e304a75-2da0-8d15-639c-fcbd2ff4c2e1
+	toCardinality: many
+	fromColumn: 'DATOS POWER BI'.'LINK Rappel'
+	toColumn: Rappel.'Link Rappel'
+

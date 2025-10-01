@@ -406,9 +406,7 @@ table 'DATOS POWER BI'
 				            if dev1 = "Devolucion" or dev2 = "Devolucion" then "Devolucion" else "Normal"),
 				    #"Personalização Adicionada1" = Table.AddColumn(Devolución, "Docenas OK", each if [Devolucion] = "Normal" then [Docenas] else 0),
 				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Docenas OK", type number}, {"Devolucion", type text}, {"LINK Rappel", type text}, {"LINK Producto", type text}}),
-				    #"Linhas Filtradas1" = Table.SelectRows(#"Tipo Alterado1", each ([Tipo Documento] <> ""))
-				
-				
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Tipo Alterado1", each ([Tipo Documento] = "Abono" or [Tipo Documento] = "Factura"))
 				in
 				    #"Linhas Filtradas1"
 				```

@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 337,
+        "x": 0,
         "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 0
+            "x": 409.4606741573034,
+            "y": 417.89887640449439
           },
           "nodeIndex": "DATOS POWER BI",
           "nodeLineageTag": "4769fc5b-55ba-4810-8fe1-8bcaa71f35e5",
@@ -19,24 +19,25 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 284,
-            "y": 14
+            "x": 0,
+            "y": 0
           },
           "nodeIndex": "Productos Grupo",
+          "nodeLineageTag": "6026b1bf-7a1b-426b-b423-433567d7fbca",
           "size": {
             "height": 272,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 568,
-            "y": 50
+            "x": 276,
+            "y": 3
           },
           "nodeIndex": "Intercos",
           "nodeLineageTag": "062f924a-e6db-4073-9af4-2728725f5102",
@@ -44,12 +45,12 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 852,
-            "y": 0
+            "x": 543,
+            "y": 4
           },
           "nodeIndex": "Rappel",
           "nodeLineageTag": "cf725a4f-53ba-4404-ab83-d270d352f58c",
@@ -57,11 +58,11 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 1136,
+            "x": 847.55056179775283,
             "y": 0
           },
           "nodeIndex": "Medias Inprovo",
@@ -70,23 +71,24 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 1420,
-            "y": 50
+            "x": 404.30337078651689,
+            "y": 802.58426966292143
           },
           "nodeIndex": "CALENDARIO DAX",
+          "nodeLineageTag": "4941f779-0f19-44a7-b43d-10a15c78ae89",
           "size": {
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 5
         }
       ],
       "name": "Todas as tabelas",
-      "zoomValue": 100,
+      "zoomValue": 77.391304347826079,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
