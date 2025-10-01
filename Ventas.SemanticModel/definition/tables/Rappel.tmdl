@@ -1,0 +1,108 @@
+table Rappel
+	lineageTag: cf725a4f-53ba-4404-ab83-d270d352f58c
+
+	column Name
+		dataType: string
+		lineageTag: a97615bd-7c9e-4d43-a962-4c61422aea60
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cód. lista precio'
+		dataType: string
+		lineageTag: 091938b0-de8b-4cf8-b300-f739f310772b
+		summarizeBy: none
+		sourceColumn: Cód. lista precio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N.º de Asignar a (personalizado)'
+		dataType: string
+		lineageTag: 78ca473b-0414-4fbc-9ef0-ebdbaa404be0
+		summarizeBy: none
+		sourceColumn: N.º de Asignar a (personalizado)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N.º línea'
+		dataType: string
+		lineageTag: 26e9ff1d-97de-4582-8aac-97b31960a520
+		summarizeBy: none
+		sourceColumn: N.º línea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripción
+		dataType: string
+		lineageTag: 5b505cae-b3d2-473a-a86f-2f055ee208cd
+		summarizeBy: none
+		sourceColumn: Descripción
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código de unidad de medida (personalizado)'
+		dataType: string
+		lineageTag: f9a10dde-212b-4182-b622-9b63be0f0075
+		summarizeBy: none
+		sourceColumn: Código de unidad de medida (personalizado)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio venta'
+		dataType: double
+		lineageTag: d550c584-62d2-4f0d-a101-6ccea506f582
+		summarizeBy: sum
+		sourceColumn: Precio venta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Condición
+		dataType: string
+		lineageTag: 362dca42-47c5-489f-9158-e47ef1f8dd17
+		summarizeBy: none
+		sourceColumn: Condición
+
+		annotation SummarizationSetBy = Automatic
+
+	column '% RAPPEL'
+		dataType: double
+		lineageTag: 26364c22-f2c2-470b-a736-1d22640fe2c3
+		summarizeBy: sum
+		sourceColumn: % RAPPEL
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Link Rappel'
+		dataType: string
+		lineageTag: 6559ec3e-7ac1-42dd-b9f6-e43a56ee308c
+		summarizeBy: none
+		sourceColumn: Link Rappel
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Rappel = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Master Data"),
+				    #"Personalização Adicionada" = Table.AddColumn(Fonte, "Table", each Excel.Workbook( [Content] , true ){[Name="Rappel 2025"]}[Data]),
+				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Personalização Adicionada",{"Name", "Table"}),
+				    #"Table Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Table", {"Cód. lista precio", "N.º de Asignar a (personalizado)", "N.º línea", "Cliente", "N.º producto (personalizado)", "Descripción", "Código de unidad de medida (personalizado)", "Precio venta", "Condición", "% RAPPEL", "Empresa"}, {"Cód. lista precio", "N.º de Asignar a (personalizado)", "N.º línea", "Cliente", "N.º producto (personalizado)", "Descripción", "Código de unidad de medida (personalizado)", "Precio venta", "Condición", "% RAPPEL", "Empresa"}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Table Expandido", each true),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Empresa", type text}, {"% RAPPEL", type number}, {"Condición", type text}, {"Precio venta", type number}, {"Código de unidad de medida (personalizado)", type text}, {"Descripción", type text}, {"N.º producto (personalizado)", type text}, {"Cliente", type text}, {"N.º línea", type text}, {"N.º de Asignar a (personalizado)", type text}, {"Cód. lista precio", type text}, {"Name", type text}}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Tipo Alterado",null,0,Replacer.ReplaceValue,{"Precio venta", "% RAPPEL"}),
+				    #"Colunas Mescladas" = Table.CombineColumns(#"Valor Substituído",{"Empresa", "N.º producto (personalizado)", "Cliente"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Link Rappel"),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Colunas Mescladas",{"Name", "Cód. lista precio", "N.º de Asignar a (personalizado)", "N.º línea", "Descripción", "Código de unidad de medida (personalizado)", "Precio venta", "Condición", "% RAPPEL", "Link Rappel"}),
+				    #"Erros Removidos" = Table.RemoveRowsWithErrors(#"Colunas Reordenadas", {"% RAPPEL"})
+				in
+				    #"Erros Removidos"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
