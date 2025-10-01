@@ -1,0 +1,377 @@
+table 'DATOS POWER BI'
+	lineageTag: 4769fc5b-55ba-4810-8fe1-8bcaa71f35e5
+
+	column Name
+		dataType: string
+		lineageTag: da5c92cb-0952-4b7f-a1f9-9819cc078879
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Empresa
+		dataType: string
+		lineageTag: b2bdeca8-11e6-4d24-bd9d-30c088d2257b
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: string
+		lineageTag: d4a6488a-0990-4f03-8544-31c79b43b293
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column Competencia
+		dataType: string
+		lineageTag: 69a557dd-65aa-4bc0-865a-611ee4a2635e
+		summarizeBy: none
+		sourceColumn: Competencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Documento'
+		dataType: string
+		lineageTag: f2aab806-a28d-4a19-95e5-81f2006ef372
+		summarizeBy: none
+		sourceColumn: Tipo Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nº Doc'
+		dataType: string
+		lineageTag: df1b4d36-a4d1-4746-8da8-43bf5d443740
+		summarizeBy: none
+		sourceColumn: Nº Doc
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo
+		dataType: string
+		lineageTag: b54cff8e-9807-480b-99e2-a39d3a9c802f
+		summarizeBy: none
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nº Línea'
+		dataType: string
+		lineageTag: 83fa56f7-3144-4b4b-8253-1b74bebc10f2
+		summarizeBy: none
+		sourceColumn: Nº Línea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comercial
+		dataType: string
+		lineageTag: 40249654-b732-4928-a908-ba8b38cfef60
+		summarizeBy: none
+		sourceColumn: Comercial
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cód. Cliente'
+		dataType: string
+		lineageTag: c124d625-57c8-467f-9cfd-fabfb2f931b8
+		summarizeBy: none
+		sourceColumn: Cód. Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente
+		dataType: string
+		lineageTag: 5be36178-3e27-46b9-a3d5-c13ceabf0aa3
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Grupo Cliente'
+		dataType: string
+		lineageTag: c3c68eec-74a8-4dc5-8f78-81f22404f1b5
+		summarizeBy: none
+		sourceColumn: Grupo Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provincia
+		dataType: string
+		lineageTag: a1f8446f-0212-4462-956d-fef6462ace89
+		summarizeBy: none
+		sourceColumn: Provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Categ. Producto'
+		dataType: string
+		lineageTag: e1eddca0-bdbf-4484-ae40-49b8373f8545
+		summarizeBy: none
+		sourceColumn: Categ. Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cód. Producto'
+		dataType: string
+		lineageTag: 9cc48af5-f90b-4ec0-9347-a31ec47da84b
+		summarizeBy: none
+		sourceColumn: Cód. Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Producto
+		dataType: string
+		lineageTag: 4d3a980a-3544-4dd2-94d8-36e9d82e2bd0
+		summarizeBy: none
+		sourceColumn: Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Producto'
+		dataType: string
+		lineageTag: 5bfe3848-7658-4f73-a988-b18774528cb6
+		summarizeBy: none
+		sourceColumn: Tipo Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Formato Envase'
+		dataType: string
+		lineageTag: 446cf6d8-4882-4b74-9fbc-0bde0f0d5c11
+		summarizeBy: none
+		sourceColumn: Formato Envase
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Forma Cría'
+		dataType: string
+		lineageTag: 76b984c1-8361-4fb6-9978-5bb0e55356eb
+		summarizeBy: none
+		sourceColumn: Forma Cría
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tamaño
+		dataType: string
+		lineageTag: c9c6e4fe-2900-4f4c-99eb-0ae398e9b0e3
+		summarizeBy: none
+		sourceColumn: Tamaño
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sub-Tamaño '
+		dataType: string
+		lineageTag: 28bf3498-e0f4-4474-8d18-598516428faf
+		summarizeBy: none
+		sourceColumn: "Sub-Tamaño "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Color Producto'
+		dataType: string
+		lineageTag: f605fffd-0179-480b-a1fd-a6baa121461d
+		summarizeBy: none
+		sourceColumn: Color Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cantidad
+		dataType: string
+		lineageTag: b8e96b58-a23f-4406-b847-17e3b06a2239
+		summarizeBy: none
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bultos
+		dataType: string
+		lineageTag: bee9bac9-1a56-426d-afbd-b3bd23b9154a
+		summarizeBy: none
+		sourceColumn: Bultos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Docenas
+		dataType: string
+		lineageTag: c4b2d4df-c9ee-4105-a20f-4b97c3688cb9
+		summarizeBy: none
+		sourceColumn: Docenas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imp. Unitario'
+		dataType: string
+		lineageTag: ccd0e606-af47-419e-95e7-4cd1817222fa
+		summarizeBy: none
+		sourceColumn: Imp. Unitario
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imp. Bruto'
+		dataType: string
+		lineageTag: 3f202c6d-3559-4ce8-8b89-722d90a234df
+		summarizeBy: none
+		sourceColumn: Imp. Bruto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imp. Bruto/Docenas'
+		dataType: string
+		lineageTag: 4307b2a0-3f40-4980-a764-0f57a4fc8b3d
+		summarizeBy: none
+		sourceColumn: Imp. Bruto/Docenas
+
+		annotation SummarizationSetBy = Automatic
+
+	column '% Dto. Línea'
+		dataType: string
+		lineageTag: ffe1cd8b-0b41-4493-91cf-9c53a231f0f5
+		summarizeBy: none
+		sourceColumn: % Dto. Línea
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imp. Neto'
+		dataType: string
+		lineageTag: 3d8f07cf-7cc7-4126-abe4-9e13f3abc631
+		summarizeBy: none
+		sourceColumn: Imp. Neto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imp. Neto / Docenas'
+		dataType: string
+		lineageTag: e6bc9dfb-ea3b-4c26-b664-5cfc0306678a
+		summarizeBy: none
+		sourceColumn: Imp. Neto / Docenas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Dto.'
+		dataType: string
+		lineageTag: e6bb78b2-614e-42c3-b0a0-df3a9a6782b6
+		summarizeBy: none
+		sourceColumn: Total Dto.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Linea'
+		dataType: string
+		lineageTag: 2eb2aabd-5c2a-44f5-847d-74c5411ca06f
+		summarizeBy: none
+		sourceColumn: Total Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imp. Pdte'
+		dataType: string
+		lineageTag: b63e3ead-066f-4e01-aead-8b95416bf74b
+		summarizeBy: none
+		sourceColumn: Imp. Pdte
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Imp. Pdte. Fact'
+		dataType: string
+		lineageTag: 508369ad-d935-4b28-9454-cbb779f00b90
+		summarizeBy: none
+		sourceColumn: Imp. Pdte. Fact
+
+		annotation SummarizationSetBy = Automatic
+
+	column Coste
+		dataType: string
+		lineageTag: 099bb911-1a53-43bc-ac4f-eadc1ec02a13
+		summarizeBy: none
+		sourceColumn: Coste
+
+		annotation SummarizationSetBy = Automatic
+
+	column Margen
+		dataType: string
+		lineageTag: 5ca2deb7-57b2-486e-9002-bebb6d0bad49
+		summarizeBy: none
+		sourceColumn: Margen
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMP
+		dataType: string
+		lineageTag: 6631eae5-709b-4694-9240-e6b791ded414
+		summarizeBy: none
+		sourceColumn: EMP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LINK Producto'
+		dataType: string
+		lineageTag: f950f62f-3da4-43b9-9044-46e0af0648cd
+		summarizeBy: none
+		sourceColumn: LINK Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LINK Rappel'
+		dataType: string
+		lineageTag: 2c614a96-eef3-41da-b398-5e046746b19f
+		summarizeBy: none
+		sourceColumn: LINK Rappel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Devolucion
+		dataType: string
+		lineageTag: e146fedb-b110-490b-8dc5-9dba45c5bd08
+		summarizeBy: none
+		sourceColumn: Devolucion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Docenas OK'
+		dataType: string
+		lineageTag: 084c440f-46e3-4c77-a699-4b78b96e0c63
+		summarizeBy: none
+		sourceColumn: Docenas OK
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DATOS POWER BI' = m
+		mode: import
+		source = ```
+				let
+				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\DATOS POWER BI"),
+				    #"Personalização Adicionada" = Table.AddColumn(Fonte, "Table", each Excel.Workbook([Content],true){[Name = "Export"]}[Data]),
+				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Personalização Adicionada",{"Name", "Table"}),
+				    #"Table Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Table", {"Empresa", "Fecha", "Competencia", "Tipo Documento", "Nº Doc", "Tipo", "Nº Línea", "Comercial", "Cód. Cliente", "Cliente", "Grupo Cliente", "Provincia", "Categ. Producto", "Cód. Producto", "Producto", "Tipo Producto", "Formato Envase", "Forma Cría", "Tamaño", "Sub-Tamaño ", "Color Producto", "Cantidad", "Bultos", "Docenas", "Imp. Unitario", "Imp. Bruto", "Imp. Bruto/Docenas", "% Dto. Línea", "Imp. Neto", "Imp. Neto / Docenas", "Total Dto.", "Total Linea", "Imp. Pdte", "Imp. Pdte. Fact", "Coste", "Margen"}, {"Empresa", "Fecha", "Competencia", "Tipo Documento", "Nº Doc", "Tipo", "Nº Línea", "Comercial", "Cód. Cliente", "Cliente", "Grupo Cliente", "Provincia", "Categ. Producto", "Cód. Producto", "Producto", "Tipo Producto", "Formato Envase", "Forma Cría", "Tamaño", "Sub-Tamaño ", "Color Producto", "Cantidad", "Bultos", "Docenas", "Imp. Unitario", "Imp. Bruto", "Imp. Bruto/Docenas", "% Dto. Línea", "Imp. Neto", "Imp. Neto / Docenas", "Total Dto.", "Total Linea", "Imp. Pdte", "Imp. Pdte. Fact", "Coste", "Margen"}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Table Expandido", each ([Cód. Producto] <> null)),
+				    Empresa = Table.AddColumn(#"Linhas Filtradas", "EMP", each if [Empresa] = "Dagu, S.A" then "Dagu" else
+				if [Empresa] = "El Granjero, S.L." then "Granjero" else
+				if [Empresa] = "GRANJA AGAS, S.A.U" then "Agas" else
+				if [Empresa] = "Granja Legaria, S.L." then "Legaria" else
+				if [Empresa] = "Larrabe Oilotegia, S.L." then "Larrabe" else
+				if [Empresa] = "Ous Roig Tortosa, S.A." then "Roig" else "0"),
+				    #"Link Producto" = Table.AddColumn(Empresa, "LINK Producto", each [EMP] & [Cód. Producto]),
+				    #"Link Rappel" = Table.AddColumn(#"Link Producto", "LINK Rappel", each [EMP] & [Cód. Cliente]),
+				    
+				    #"Devolución" = Table.AddColumn(
+				    #"Link Rappel",
+				    "Devolucion",
+				    each 
+				        let
+				            dev1 = if [Docenas] * [Imp. Bruto] < 0 then "Devolucion" else "Normal",
+				            dev2 = if [Imp. Bruto] < 0 then "Devolucion" else "Normal"
+				        in
+				            if dev1 = "Devolucion" or dev2 = "Devolucion" then "Devolucion" else "Normal"),
+				    #"Personalização Adicionada1" = Table.AddColumn(Devolución, "Docenas OK", each if [Devolucion] = "Normal" then [Docenas] else 0)
+				
+				
+				in
+				    #"Personalização Adicionada1"
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

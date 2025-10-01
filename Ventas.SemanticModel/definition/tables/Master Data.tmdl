@@ -1,0 +1,82 @@
+table 'Master Data'
+	lineageTag: 6026b1bf-7a1b-426b-b423-433567d7fbca
+
+	column Name
+		dataType: string
+		lineageTag: cfe6ecf0-5119-4507-a790-f9910ecff42a
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nº
+		dataType: string
+		lineageTag: a42f8153-24ff-499f-aadc-5aa5f7ddb905
+		summarizeBy: none
+		sourceColumn: Nº
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripción
+		dataType: string
+		lineageTag: 1523b297-abe9-47e0-be97-27fcac6ea341
+		summarizeBy: none
+		sourceColumn: Descripción
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cruce
+		dataType: string
+		lineageTag: 422411a1-897f-4afd-a13c-4c32a1084432
+		summarizeBy: none
+		sourceColumn: Cruce
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Forma Cría'
+		dataType: string
+		lineageTag: 41bbf89f-5cf3-49f2-aed2-597a28b8ae20
+		summarizeBy: none
+		sourceColumn: Forma Cría
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sub-Tamaño y clasificación'
+		dataType: string
+		lineageTag: 294408fa-fb14-48d2-9c5f-05014a3556a7
+		summarizeBy: none
+		sourceColumn: Sub-Tamaño y clasificación
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Formato envase'
+		dataType: string
+		lineageTag: febac20e-ab55-4075-b9fe-691e44e9c2ce
+		summarizeBy: none
+		sourceColumn: Formato envase
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gestión envases'
+		dataType: string
+		lineageTag: 7e000d30-e26c-41be-97b8-7ea5efcb47ff
+		summarizeBy: none
+		sourceColumn: Gestión envases
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Master Data' = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Master Data"),
+				    #"Personalização Adicionada" = Table.AddColumn(Fonte, "Table", each Excel.Workbook( [Content], true ){[Name = "Productos"]}[Data]),
+				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Personalização Adicionada",{"Name", "Table"}),
+				    #"Table Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Table", {"Nº", "Descripción", "Cruce", "Forma Cría", "Sub-Tamaño y clasificación", "Formato envase", "Gestión envases"}, {"Nº", "Descripción", "Cruce", "Forma Cría", "Sub-Tamaño y clasificación", "Formato envase", "Gestión envases"})
+				in
+				    #"Table Expandido"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
