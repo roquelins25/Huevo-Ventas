@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 337,
         "y": 0
       },
       "nodes": [
@@ -40,6 +40,44 @@
           },
           "nodeIndex": "Intercos",
           "nodeLineageTag": "062f924a-e6db-4073-9af4-2728725f5102",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 0
+          },
+          "nodeIndex": "Rappel",
+          "nodeLineageTag": "cf725a4f-53ba-4404-ab83-d270d352f58c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 0
+          },
+          "nodeIndex": "Medias Inprovo",
+          "nodeLineageTag": "d8476d2f-cb8e-4dfd-b183-9be0a4045767",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 50
+          },
+          "nodeIndex": "CALENDARIO DAX",
           "size": {
             "height": 200,
             "width": 234

@@ -17,6 +17,7 @@ ref table 'Productos Grupo'
 ref table Intercos
 ref table Rappel
 ref table 'Medias Inprovo'
+ref table 'CALENDARIO DAX'
 
 ref cultureInfo pt-BR
 

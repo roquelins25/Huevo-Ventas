@@ -19,7 +19,7 @@ table 'DATOS POWER BI'
 
 	column Fecha
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: d4a6488a-0990-4f03-8544-31c79b43b293
 		summarizeBy: none
 		sourceColumn: Fecha
@@ -30,7 +30,7 @@ table 'DATOS POWER BI'
 
 	column Competencia
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: 69a557dd-65aa-4bc0-865a-611ee4a2635e
 		summarizeBy: none
 		sourceColumn: Competencia
@@ -405,11 +405,12 @@ table 'DATOS POWER BI'
 				        in
 				            if dev1 = "Devolucion" or dev2 = "Devolucion" then "Devolucion" else "Normal"),
 				    #"Personalização Adicionada1" = Table.AddColumn(Devolución, "Docenas OK", each if [Devolucion] = "Normal" then [Docenas] else 0),
-				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Docenas OK", type number}, {"Devolucion", type text}, {"LINK Rappel", type text}, {"LINK Producto", type text}})
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Docenas OK", type number}, {"Devolucion", type text}, {"LINK Rappel", type text}, {"LINK Producto", type text}}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Tipo Alterado1", each ([Tipo Documento] <> ""))
 				
 				
 				in
-				    #"Tipo Alterado1"
+				    #"Linhas Filtradas1"
 				```
 
 	annotation PBI_NavigationStepName = Navegação
