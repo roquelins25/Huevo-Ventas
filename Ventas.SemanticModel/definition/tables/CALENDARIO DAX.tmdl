@@ -98,6 +98,7 @@ table 'CALENDARIO DAX'
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Ano-Mes]
+		sortByColumn: OrderBy
 
 		annotation SummarizationSetBy = Automatic
 
@@ -123,7 +124,7 @@ table 'CALENDARIO DAX'
 		mode: import
 		source =
 				
-				var minAno = YEAR(MIN('DATOS POWER BI'[Fecha])) //2026
+				var minAno = YEAR(DATE(2025,01,01)) //2026
 				var MaxAno = YEAR(MAX('DATOS POWER BI'[Fecha])) //2035
 				RETURN
 				ADDCOLUMNS(

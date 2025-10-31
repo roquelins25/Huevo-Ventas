@@ -11,7 +11,7 @@ table 'Medias Inprovo'
 
 	column Date
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: 5944bb38-8001-4e0d-bd62-ae3205b04875
 		summarizeBy: none
 		sourceColumn: Date
@@ -135,8 +135,8 @@ table 'Medias Inprovo'
 				    #"Função Personalizada Invocada" = Table.AddColumn(#"Replaced Values", "Date", each FxSemana([SEMANA])),
 				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Função Personalizada Invocada",{{"Date", type date}}),
 				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Tipo Alterado1",{"SEMANA", "SUELO#(lf)'L", "SUELO#(lf)'M", "ECOLOGICO#(lf) L/24", "ECOLOGICO#(lf)M/24", "JAULA#(lf)L", "JAULA #(lf)M", "Tipo_ovo", "Preço", "Date"})
-				    in
-				        #"Outras Colunas Removidas"
+				in
+				    #"Outras Colunas Removidas"
 
 	annotation PBI_NavigationStepName = Navegação
 

@@ -85,6 +85,30 @@ table Rappel
 
 		annotation SummarizationSetBy = Automatic
 
+	column Cliente
+		dataType: string
+		lineageTag: 89ddde50-ccea-496f-bda4-0d25cd7cf163
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'N.º producto (personalizado)'
+		dataType: string
+		lineageTag: e8997969-dd21-4eb9-bd23-e35b8e2b6045
+		summarizeBy: none
+		sourceColumn: N.º producto (personalizado)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Empresa
+		dataType: string
+		lineageTag: b87fd799-4cd6-41e7-8573-cfd037bb8e4f
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Rappel = m
 		mode: import
 		source =
@@ -96,10 +120,9 @@ table Rappel
 				    #"Linhas Filtradas" = Table.SelectRows(#"Table Expandido", each true),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Empresa", type text}, {"% RAPPEL", type number}, {"Condición", type text}, {"Precio venta", type number}, {"Código de unidad de medida (personalizado)", type text}, {"Descripción", type text}, {"N.º producto (personalizado)", type text}, {"Cliente", type text}, {"N.º línea", type text}, {"N.º de Asignar a (personalizado)", type text}, {"Cód. lista precio", type text}, {"Name", type text}}),
 				    #"Valor Substituído" = Table.ReplaceValue(#"Tipo Alterado",null,0,Replacer.ReplaceValue,{"Precio venta", "% RAPPEL"}),
-				    #"Colunas Mescladas" = Table.CombineColumns(#"Valor Substituído",{"Empresa", "N.º producto (personalizado)", "Cliente"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Link Rappel"),
-				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Colunas Mescladas",{"Name", "Cód. lista precio", "N.º de Asignar a (personalizado)", "N.º línea", "Descripción", "Código de unidad de medida (personalizado)", "Precio venta", "Condición", "% RAPPEL", "Link Rappel"}),
-				    #"Erros Removidos" = Table.RemoveRowsWithErrors(#"Colunas Reordenadas", {"% RAPPEL"}),
-				    #"Linhas Filtradas1" = Table.SelectRows(#"Erros Removidos", each ([#"N.º de Asignar a (personalizado)"] <> null))
+				    #"LINK RAPPEL" = Table.AddColumn(#"Valor Substituído", "Link Rappel", each Text.Combine({[Empresa], [#"N.º producto (personalizado)"], [Cliente]}, ""), type text),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"LINK RAPPEL",{"Name", "Cód. lista precio", "N.º de Asignar a (personalizado)", "N.º línea", "Descripción", "Código de unidad de medida (personalizado)", "Precio venta", "Condición", "% RAPPEL", "Link Rappel"}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Colunas Reordenadas", each ([#"N.º de Asignar a (personalizado)"] <> null))
 				in
 				    #"Linhas Filtradas1"
 
