@@ -1,0 +1,23 @@
+table tipo_huevo
+	lineageTag: 0a142189-73e4-4a65-93bf-409bf1b6cfcc
+
+	column tipo_huevo
+		dataType: string
+		lineageTag: 929a37a7-ee1d-4878-83c6-36f3bd458aa7
+		summarizeBy: none
+		sourceColumn: tipo_huevo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition tipo_huevo = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8nIM9XFUitWJVnJ19vc5PNnd09kfzHV29A1wDYKwg0NdfYCsWAA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [tipo_huevo = _t])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

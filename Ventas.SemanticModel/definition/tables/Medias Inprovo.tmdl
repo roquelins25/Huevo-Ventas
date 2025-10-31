@@ -9,66 +9,6 @@ table 'Medias Inprovo'
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'SUELO_''L'
-		dataType: double
-		lineageTag: ce7de868-156b-4111-ba9c-9753440e0d12
-		summarizeBy: sum
-		sourceColumn: SUELO_'L
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'SUELO_''M'
-		dataType: double
-		lineageTag: 8665b401-89cc-4603-94f9-c58c0fa8a89b
-		summarizeBy: sum
-		sourceColumn: SUELO_'M
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'ECOLOGICO_ L/24'
-		dataType: double
-		lineageTag: a5e950e4-b957-4514-b8d1-aae66f62bda0
-		summarizeBy: sum
-		sourceColumn: ECOLOGICO_ L/24
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column ECOLOGICO_M/24
-		dataType: double
-		lineageTag: 9a30437e-6e98-4f25-9cb3-a8270cca809d
-		summarizeBy: sum
-		sourceColumn: ECOLOGICO_M/24
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column JAULA_L
-		dataType: double
-		lineageTag: 86fc743a-4401-480d-b2e5-83203a4ae36e
-		summarizeBy: sum
-		sourceColumn: JAULA_L
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'JAULA _M'
-		dataType: double
-		lineageTag: ff8db82b-52a4-47e9-bc7f-cc0de026569e
-		summarizeBy: sum
-		sourceColumn: JAULA _M
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column Date
 		dataType: dateTime
 		formatString: Long Date
@@ -80,19 +20,79 @@ table 'Medias Inprovo'
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column Atributo
-		dataType: string
-		lineageTag: 7e943437-89db-4173-b297-78729e184913
-		summarizeBy: none
-		sourceColumn: Atributo
+	column 'SUELO''L'
+		dataType: double
+		lineageTag: a6e795f0-8942-4048-8b19-8456cccdecba
+		summarizeBy: sum
+		sourceColumn: SUELO'L
 
 		annotation SummarizationSetBy = Automatic
 
-	column Valor
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'SUELO''M'
 		dataType: double
-		lineageTag: 2b729064-57c6-49ba-8be4-2b5110aa3c89
+		lineageTag: 243dcae7-c7a6-4dad-9623-de9f9da2de67
 		summarizeBy: sum
-		sourceColumn: Valor
+		sourceColumn: SUELO'M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ECOLOGICO L/24'
+		dataType: double
+		lineageTag: 03683507-c3dc-44e7-8c0b-a16befad85a4
+		summarizeBy: sum
+		sourceColumn: ECOLOGICO L/24
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ECOLOGICOM/24
+		dataType: double
+		lineageTag: c1fefc66-abd1-4c05-afd3-835d0ba8f65b
+		summarizeBy: sum
+		sourceColumn: ECOLOGICOM/24
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column JAULAL
+		dataType: double
+		lineageTag: 011d2416-ec0f-4d1d-ad71-2a573baa60da
+		summarizeBy: sum
+		sourceColumn: JAULAL
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'JAULA M'
+		dataType: double
+		lineageTag: c7f0540b-d79d-446c-ac5f-96bc7a1bc5b0
+		summarizeBy: sum
+		sourceColumn: JAULA M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Tipo_ovo
+		dataType: string
+		lineageTag: a04e01dd-cbb1-4cef-9dae-8a0a61cdee27
+		summarizeBy: none
+		sourceColumn: Tipo_ovo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Preço
+		dataType: double
+		lineageTag: 7e7d8739-d4fd-48f2-91ba-3c126123ec39
+		summarizeBy: sum
+		sourceColumn: Preço
 
 		annotation SummarizationSetBy = Automatic
 
@@ -103,16 +103,40 @@ table 'Medias Inprovo'
 		source =
 				let
 				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Medias Inprovo"),
-				    #"Personalização Adicionada" = Table.AddColumn(Fonte, "Table", each Excel.Workbook([Content],true){[Name="MEDIAS "]}[Data]),
+				    #"Personalização Adicionada" = Table.AddColumn(Fonte, "Table", each Excel.Workbook([Content]){[Name="MEDIAS "]}[Data]),
 				    #"Linhas Filtradas" = Table.SelectRows(#"Personalização Adicionada", each ([Extension] = ".xls")),
-				    #"Table Expandido" = Table.ExpandTableColumn(#"Linhas Filtradas", "Table", {"F1", "SEMANA", "SUELO_'L", "SUELO_'M", "MEDIA SUELO", "CAMPERO_", "ECOLOGICO_ L/24", "ECOLOGICO_M/24", "MEDIA ECOLOGICO", "JAULA_L", "JAULA _M", "MEDIA JAULA (DOCENA )", "JAULA INDUSTRIA (€/K)", "F14", "F15"}, {"F1", "SEMANA", "SUELO_'L", "SUELO_'M", "MEDIA SUELO", "CAMPERO_", "ECOLOGICO_ L/24", "ECOLOGICO_M/24", "MEDIA ECOLOGICO", "JAULA_L", "JAULA _M", "MEDIA JAULA (DOCENA )", "JAULA INDUSTRIA (€/K)", "F14", "F15"}),
-				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Table Expandido",{"SEMANA", "SUELO_'L", "SUELO_'M", "MEDIA SUELO", "CAMPERO_", "ECOLOGICO_ L/24", "ECOLOGICO_M/24", "MEDIA ECOLOGICO", "JAULA_L", "JAULA _M", "MEDIA JAULA (DOCENA )", "JAULA INDUSTRIA (€/K)"}),
-				    #"Linhas Filtradas1" = Table.SelectRows(#"Outras Colunas Removidas", each ([SEMANA] <> null and [SEMANA] <> "19,39" and [SEMANA] <> "MEDIA") and ([#"SUELO_'L"] <> null)),
-				    #"Função Personalizada Invocada" = Table.AddColumn(#"Linhas Filtradas1", "Date", each FxSemana([SEMANA])),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Função Personalizada Invocada",{{"Date", type date}, {"JAULA INDUSTRIA (€/K)", type number}, {"MEDIA JAULA (DOCENA )", type number}, {"JAULA _M", type number}, {"JAULA_L", type number}, {"MEDIA ECOLOGICO", type number}, {"ECOLOGICO_M/24", type number}, {"ECOLOGICO_ L/24", type number}, {"CAMPERO_", type number}, {"MEDIA SUELO", type number}, {"SUELO_'M", type number}, {"SUELO_'L", type number}, {"SEMANA", type text}}),
-				    #"Outras Colunas Não Dinâmicas" = Table.UnpivotOtherColumns(#"Tipo Alterado", {"SEMANA","SUELO_'L", "SUELO_'M", "ECOLOGICO_ L/24", "ECOLOGICO_M/24", "JAULA_L", "JAULA _M","Date"}, "Atributo", "Valor")
-				in
-				    #"Outras Colunas Não Dinâmicas"
+				    #"C:\Users\bruno silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Medias Inprovo\_ENVIO MEDIAS PONDERADAS AÑO  2024-2025 - 4  SISTEMAS PRODUCCION xls" = #"Linhas Filtradas"{[#"Folder Path"="C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Medias Inprovo\",Name="ENVIO MEDIAS PONDERADAS AÑO  2024-2025 - 4  SISTEMAS PRODUCCION.xls"]}[Table],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"C:\Users\bruno silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Medias Inprovo\_ENVIO MEDIAS PONDERADAS AÑO  2024-2025 - 4  SISTEMAS PRODUCCION xls", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Column1", type text}, {"SEMANA", type text}, {"SUELO#(lf)'L", type number}, {"SUELO#(lf)'M", type number}, {"MEDIA SUELO", type number}, {"CAMPERO#(lf)", type number}, {"ECOLOGICO#(lf) L/24", type number}, {"ECOLOGICO#(lf)M/24", type number}, {"MEDIA ECOLOGICO", type number}, {"JAULA#(lf)L", type number}, {"JAULA #(lf)M", type number}, {"MEDIA JAULA (DOCENA )", type number}, {"JAULA INDUSTRIA (€/K)", type number}}),
+				    Personalizar1 = Table.UnpivotOtherColumns(#"Tipo Alterado", {"Column1", "SEMANA", "SUELO#(lf)'L", "SUELO#(lf)'M", "ECOLOGICO#(lf) L/24", "ECOLOGICO#(lf)M/24", "JAULA#(lf)L", "JAULA #(lf)M", "Column14", "Column15"}, "Attribute", "Value"),
+				    #"Colunas Renomeadas" = Table.RenameColumns(Personalizar1,{{"Attribute", "Tipo_ovo"}, {"Value", "Preço"}}),
+				
+				    // 🔁 Lista de substituições
+				        Substituicoes = {
+				            {"MEDIA SUELO", "SUELO"},
+				            {"MEDIA ECOLOGICO", "ECOLÓGICO"},
+				            {"MEDIA JAULA", "JAULA"},
+				            {"JAULA (DOCENA )", "JAULA"}
+				        },
+				
+				        // 🧠 Aplicando todas as substituições em um único passo
+				        #"Replaced Values" = List.Accumulate(
+				            Substituicoes,
+				            #"Colunas Renomeadas",
+				            (state, current) =>
+				                Table.ReplaceValue(
+				                    state,
+				                    current{0},
+				                    current{1},
+				                    Replacer.ReplaceText,
+				                    {"Tipo_ovo"}
+				                )
+				        ),
+				    #"Função Personalizada Invocada" = Table.AddColumn(#"Replaced Values", "Date", each FxSemana([SEMANA])),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Função Personalizada Invocada",{{"Date", type date}}),
+				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Tipo Alterado1",{"SEMANA", "SUELO#(lf)'L", "SUELO#(lf)'M", "ECOLOGICO#(lf) L/24", "ECOLOGICO#(lf)M/24", "JAULA#(lf)L", "JAULA #(lf)M", "Tipo_ovo", "Preço", "Date"})
+				    in
+				        #"Outras Colunas Removidas"
 
 	annotation PBI_NavigationStepName = Navegação
 

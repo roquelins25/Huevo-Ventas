@@ -95,10 +95,13 @@ table 'Productos Grupo'
 				if [Name] = "MASTER DATA LARRABE.xlsx" then "Larrabe" else 
 				if [Name] = "MASTER DATA LEGARIA.xlsx" then "Legaria" else
 				if [Name] = "MASTER DATA ROIG.xlsx" then "Roig" else "0"),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Name", type text}, {"Nº", type text}, {"Descripción", type text}, {"Cruce", type text}, {"Forma Cría", type text}, {"Sub-Tamaño y clasificación", type text}, {"Formato envase", type text}, {"Gestión envases", type text}, {"EMP", type text}}),
-				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Tipo Alterado", "LINK Producto", each Text.Combine({[EMP], [Nº]}, ""), type text)
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Name", type text}, {"Nº", type text}, {"Descripción", type text}, {"Cruce", type text}, {"Forma Cría", type text}, {"Sub-Tamaño y clasificación", type text}, {"Formato envase", type text}, {"Gestión envases", type text}, {"EMP", type text}}),
+				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Tipo Alterado1", "LINK Producto", each Text.Combine({[EMP], [Nº]}, ""), type text),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Coluna Mesclada Inserida", each ([Gestión envases] <> null)),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Linhas Filtradas","ECOLOGICO","ECOLÓGICO",Replacer.ReplaceText,{"Forma Cría"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"Name", type text}, {"Nº", type text}, {"Descripción", type text}, {"Cruce", type text}, {"Forma Cría", type text}, {"Sub-Tamaño y clasificación", type text}, {"Formato envase", type text}, {"Gestión envases", type text}, {"EMP", type text}})
 				in
-				    #"Coluna Mesclada Inserida"
+				    #"Tipo Alterado"
 				```
 
 	annotation PBI_NavigationStepName = Navegação

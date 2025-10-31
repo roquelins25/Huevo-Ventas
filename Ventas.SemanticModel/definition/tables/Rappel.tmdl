@@ -52,7 +52,7 @@ table Rappel
 	column 'Precio venta'
 		dataType: double
 		lineageTag: d550c584-62d2-4f0d-a101-6ccea506f582
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Precio venta
 
 		annotation SummarizationSetBy = Automatic
@@ -70,7 +70,7 @@ table Rappel
 	column '% RAPPEL'
 		dataType: double
 		lineageTag: 26364c22-f2c2-470b-a736-1d22640fe2c3
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: % RAPPEL
 
 		annotation SummarizationSetBy = Automatic
@@ -98,9 +98,10 @@ table Rappel
 				    #"Valor Substituído" = Table.ReplaceValue(#"Tipo Alterado",null,0,Replacer.ReplaceValue,{"Precio venta", "% RAPPEL"}),
 				    #"Colunas Mescladas" = Table.CombineColumns(#"Valor Substituído",{"Empresa", "N.º producto (personalizado)", "Cliente"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Link Rappel"),
 				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Colunas Mescladas",{"Name", "Cód. lista precio", "N.º de Asignar a (personalizado)", "N.º línea", "Descripción", "Código de unidad de medida (personalizado)", "Precio venta", "Condición", "% RAPPEL", "Link Rappel"}),
-				    #"Erros Removidos" = Table.RemoveRowsWithErrors(#"Colunas Reordenadas", {"% RAPPEL"})
+				    #"Erros Removidos" = Table.RemoveRowsWithErrors(#"Colunas Reordenadas", {"% RAPPEL"}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Erros Removidos", each ([#"N.º de Asignar a (personalizado)"] <> null))
 				in
-				    #"Erros Removidos"
+				    #"Linhas Filtradas1"
 
 	annotation PBI_NavigationStepName = Navegação
 

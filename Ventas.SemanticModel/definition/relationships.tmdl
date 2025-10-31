@@ -1,17 +1,32 @@
-relationship c2b1f368-6905-1246-f6c1-6517e0c33f6a
-	fromColumn: 'DATOS POWER BI'.Fecha
-	toColumn: 'CALENDARIO DAX'.Date
-
-relationship 831e7c67-3332-140d-2476-04b3bc0da2a8
+relationship d3e54847-5034-60a6-18ff-7c10e0e8a647
 	fromColumn: 'DATOS POWER BI'.'LINK Producto'
 	toColumn: 'Productos Grupo'.'LINK Producto'
 
-relationship bf468633-e85e-e7dd-10e4-e28ef2bb8d16
-	fromColumn: 'DATOS POWER BI'.'LINK Rappel'
+relationship 87cd3789-23a6-baf5-9f4a-a9876b554928
+	fromColumn: 'DATOS POWER BI'.Fecha
+	toColumn: 'CALENDARIO DAX'.Date
+
+relationship bed16583-6074-faae-e59e-ec7b6e9c74f4
+	fromColumn: 'DATOS POWER BI'.'CALC Interco'
 	toColumn: Intercos.'CALC cliente'
 
-relationship 0e304a75-2da0-8d15-639c-fcbd2ff4c2e1
-	toCardinality: many
+relationship e654749c-cbf9-8df7-0d10-955a1450228a
 	fromColumn: 'DATOS POWER BI'.'LINK Rappel'
 	toColumn: Rappel.'Link Rappel'
+
+relationship b64e6a1f-666b-2ff0-ba0a-235a044b8fbf
+	fromColumn: 'Productos Grupo'.'Forma Cría'
+	toColumn: tipo_huevo.tipo_huevo
+
+relationship 0f993446-f7c3-f3ed-bf25-7d6f93b34efc
+	fromColumn: 'Medias Inprovo'.Tipo_ovo
+	toColumn: tipo_huevo.tipo_huevo
+
+relationship eea4e001-8745-4cd2-d9ee-96bbe3633d7e
+	fromColumn: 'Medias Inprovo'.Date
+	toColumn: 'CALENDARIO DAX'.Date
+
+relationship d768c0d8-8c9f-de56-7948-812e9ba4ead5
+	fromColumn: 'Productos Grupo'.'Sub-Tamaño y clasificación'
+	toColumn: Tamanos_Agrupados.TAMANOS
 

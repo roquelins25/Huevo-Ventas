@@ -13,7 +13,7 @@ table 'CALENDARIO DAX'
 	column Ano
 		formatString: 0
 		lineageTag: f214371d-24a9-4656-8191-7774eb703492
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Ano]
 
@@ -22,7 +22,7 @@ table 'CALENDARIO DAX'
 	column Mês
 		formatString: 0
 		lineageTag: 389f26bb-8e40-4f83-a4d1-15825f6f91bb
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Mês]
 
@@ -63,7 +63,7 @@ table 'CALENDARIO DAX'
 	column Dia
 		formatString: 0
 		lineageTag: b1393fa6-e99f-4b17-8b60-d3034e7785b7
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Dia]
 
@@ -104,7 +104,7 @@ table 'CALENDARIO DAX'
 	column OrderBy
 		formatString: 0
 		lineageTag: e80676d9-2175-427d-a46f-48107b72c39f
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [OrderBy]
 
@@ -113,7 +113,7 @@ table 'CALENDARIO DAX'
 	column Numerosemana
 		formatString: 0
 		lineageTag: 6e676204-3be4-4363-9c20-0d6ece8587c0
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Numerosemana]
 

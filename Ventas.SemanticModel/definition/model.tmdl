@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["DATOS POWER BI","Productos Grupo","Intercos","Rappel","Medias Inprovo","FxSemana"]
+annotation PBI_QueryOrder = ["DATOS POWER BI","Productos Grupo","Intercos","Rappel","Medias Inprovo","FxSemana","Tamanos_Agrupados","tipo_huevo"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -18,6 +18,8 @@ ref table Intercos
 ref table Rappel
 ref table 'Medias Inprovo'
 ref table 'CALENDARIO DAX'
+ref table Tamanos_Agrupados
+ref table tipo_huevo
 
 ref cultureInfo pt-BR
 
