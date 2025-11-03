@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 567.8911790500938
+        "y": 1273.409046900593
       },
       "nodes": [
         {
           "location": {
             "x": 342.26966292134847,
-            "y": 951.88961685735853
+            "y": 2307.6874786039425
           },
           "nodeIndex": "DATOS POWER BI",
           "nodeLineageTag": "4769fc5b-55ba-4810-8fe1-8bcaa71f35e5",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 547.86516853932574,
-            "y": 624.440178655111
+            "y": 1980.2380404016951
           },
           "nodeIndex": "Productos Grupo",
           "nodeLineageTag": "6026b1bf-7a1b-426b-b423-433567d7fbca",
@@ -38,7 +38,7 @@
         {
           "location": {
             "x": 0,
-            "y": 623.563774160729
+            "y": 1979.361635907313
           },
           "nodeIndex": "Intercos",
           "nodeLineageTag": "062f924a-e6db-4073-9af4-2728725f5102",
@@ -52,7 +52,7 @@
         {
           "location": {
             "x": 270.35955056179773,
-            "y": 623.2716393292684
+            "y": 1979.0695010758525
           },
           "nodeIndex": "Rappel",
           "nodeLineageTag": "cf725a4f-53ba-4404-ab83-d270d352f58c",
@@ -66,7 +66,7 @@
         {
           "location": {
             "x": 863.05617977528107,
-            "y": 953.934560677583
+            "y": 2309.7324224241665
           },
           "nodeIndex": "Medias Inprovo",
           "nodeLineageTag": "d8476d2f-cb8e-4dfd-b183-9be0a4045767",
@@ -79,7 +79,7 @@
         {
           "location": {
             "x": 600.70786516853934,
-            "y": 1355.9570325876955
+            "y": 2711.7548943342795
           },
           "nodeIndex": "CALENDARIO DAX",
           "nodeLineageTag": "4941f779-0f19-44a7-b43d-10a15c78ae89",
@@ -92,7 +92,7 @@
         {
           "location": {
             "x": 485.40759726057922,
-            "y": 412.33738989791783
+            "y": 1768.1352516445017
           },
           "nodeIndex": "Tamanos_Agrupados",
           "nodeLineageTag": "4d55ee22-c15c-4853-95db-8063646e6eab",
@@ -106,7 +106,7 @@
         {
           "location": {
             "x": 845.71910112359546,
-            "y": 430.24916741915592
+            "y": 1786.0470291657398
           },
           "nodeIndex": "tipo_huevo",
           "nodeLineageTag": "0a142189-73e4-4a65-93bf-409bf1b6cfcc",
@@ -118,8 +118,8 @@
         },
         {
           "location": {
-            "x": 1129.6717559268088,
-            "y": 570.48373863888537
+            "x": 1467.2193189846453,
+            "y": 2200.0862759989077
           },
           "nodeIndex": "_Medidas",
           "nodeLineageTag": "a9a3f63b-c689-4288-9737-25352798c6ff",
@@ -131,8 +131,8 @@
         },
         {
           "location": {
-            "x": 1458.5815175353623,
-            "y": 569.51273053312991
+            "x": 1462.9276234974805,
+            "y": 2100.6035327518093
           },
           "nodeIndex": "xParametro",
           "nodeLineageTag": "86955e3f-f42e-4048-b1e9-955ccb2bb2df",
@@ -142,6 +142,47 @@
           },
           "zIndex": 0,
           "expandedHeight": 152
+        },
+        {
+          "location": {
+            "x": 1455.7385240355698,
+            "y": 2006.3833326826305
+          },
+          "nodeIndex": "yAcess",
+          "nodeLineageTag": "3658ca6f-6050-4b40-a76e-fd72ec5830c9",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 224
+        },
+        {
+          "location": {
+            "x": 1058.9030004453593,
+            "y": 1976.8944655225239
+          },
+          "nodeIndex": "xEmpresa",
+          "nodeLineageTag": "38c4dc03-9ec3-4eff-b911-1efd40d0a538",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1305.1279278237635,
+            "y": 1681.9024087299429
+          },
+          "nodeIndex": "xRLS",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 248
         }
       ],
       "name": "Todas as tabelas",

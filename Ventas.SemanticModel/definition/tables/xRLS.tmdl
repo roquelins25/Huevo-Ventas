@@ -1,0 +1,80 @@
+table xRLS
+	lineageTag: 46cc0ae7-c152-406a-9954-37f20124af59
+
+	measure 'Password Acess' =
+			
+			SWITCH(
+			    TRUE(),
+			    SELECTEDVALUE( xRLS[Email] ) = MAX( xRLS[Email] ) && [Valor yAcess] = MAX(xRLS[Password] ), "Home",
+			    "Incorrect Password"
+			    )
+		lineageTag: d237af59-e3bb-4b8b-90e6-09dd615de42b
+
+	column Company
+		dataType: string
+		lineageTag: 9620d52c-cbd9-4164-a230-4e48c8ae8fad
+		summarizeBy: none
+		sourceColumn: Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: 4ed2111a-e103-4fc8-b366-f2ca9c64fb4f
+		summarizeBy: none
+		sourceColumn: Email
+		sortByColumn: Indice
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Password
+		dataType: double
+		lineageTag: 121b4398-149b-470f-8659-543a55efcd27
+		summarizeBy: sum
+		sourceColumn: Password
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Indice
+		dataType: string
+		lineageTag: 7dfa0af6-a9c2-46cb-a74e-7563653c2ec4
+		summarizeBy: none
+		sourceColumn: Indice
+
+		annotation SummarizationSetBy = Automatic
+
+	partition xRLS = m
+		mode: import
+		source = ```
+				let
+				    Fonte = SharePoint.Contents("https://hillandalefarms-my.sharepoint.com/personal/mribeiro_hillandalefarms_com"){[Name="Documents"]}[Content]{[Name="BI-Reports"]}[Content]{[Name="Data"]}[Content]{[Name="acess"]}[Content],
+				    #"Personalização Adicionada" = Table.AddColumn(Fonte, "Table", each Excel.Workbook([Content],true){[Name="AcessHevo"]}[Data]),
+				    #"Acess xlsx" = #"Personalização Adicionada"{[Name="Acess.xlsx"]}[Table],
+				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Acess xlsx",{"Company", "Email", "Password"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Outras Colunas Removidas",{{"Company", type text}, {"Email", type text}, {"Password", type number}}),
+				
+				    AddRowID = Table.AddIndexColumn(#"Tipo Alterado", "RowID", 0, 1, Int64.Type),
+				    
+				
+				    AddPrevEmail = Table.AddColumn(AddRowID, "PrevEmail", each try AddRowID[Email]{[RowID]-1} otherwise null),
+				    
+				
+				    AddFlag = Table.AddColumn(AddPrevEmail, "Flag", each if [Email] <> [PrevEmail] then 1 else 0),
+				    
+				
+				    AddIndice = Table.AddColumn(AddFlag, "Indice", each List.Sum(List.FirstN(AddFlag[Flag],[RowID]+1))),
+				    
+				
+				    RemoveAux = Table.RemoveColumns(AddIndice,{"RowID","PrevEmail","Flag"})
+				in
+				    RemoveAux
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

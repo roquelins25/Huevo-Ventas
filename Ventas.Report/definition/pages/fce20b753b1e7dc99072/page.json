@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "391423bac6c21cd467a2",
-  "displayName": "Home",
+  "name": "fce20b753b1e7dc99072",
+  "displayName": "Login",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
@@ -14,7 +14,7 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'Hevo - Home.png'"
+                    "Value": "'Login Hevo.png'"
                   }
                 }
               },
@@ -23,7 +23,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Hevo_-_Home6137636080894782.png"
+                    "ItemName": "Login_Hevo17166829391780736.png"
                   }
                 }
               },
@@ -46,6 +46,5 @@
         }
       }
     ]
-  },
-  "visibility": "HiddenInViewMode"
+  }
 }

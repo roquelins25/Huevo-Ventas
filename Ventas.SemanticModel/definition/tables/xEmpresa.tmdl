@@ -1,0 +1,19 @@
+table xEmpresa
+	lineageTag: 38c4dc03-9ec3-4eff-b911-1efd40d0a538
+
+	column EMP
+		lineageTag: 587a1c31-3531-4052-b0ef-9d9e0c6cf829
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: DATOS POWER BI[EMP]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition xEmpresa = calculated
+		mode: import
+		source =
+				
+				VALUES( 'DATOS POWER BI'[EMP] )
+
+	annotation PBI_Id = 99c3e05ab56643d1a3b32ef6ee9d8fd7
+

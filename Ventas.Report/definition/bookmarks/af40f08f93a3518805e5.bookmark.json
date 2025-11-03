@@ -16,7 +16,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "97fac50697438c54955b",
+                  "name": "de41a9003f47daef0655",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -56,7 +56,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e97a8974cc1259da6aa4",
+                  "name": "25ac1de1b7404016c436",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -71,7 +71,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9bf08436585e5ac84613",
+                  "name": "7616dfb88b2e2a42a557",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -169,7 +169,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "bee4333023125ead9508",
+                  "name": "e4743e6aa4bb09d4da24",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -189,7 +189,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "54e2261858b56050efcf",
+                  "name": "18554826b43f236f26fb",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -209,7 +209,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "aa9be5c70e4a42997e14",
+                  "name": "36a0196f699500485f29",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -229,7 +229,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0735d948873b132df92e",
+                  "name": "105e13d2353a7f858810",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -410,7 +410,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6a70704998014ca071a3",
+                  "name": "773b0720f051c157fa6e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -425,7 +425,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "55ea136b32957212e3c7",
+                  "name": "7cb247f2e8b4f3ae039b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -520,7 +520,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0af26d9cb93bd6255af6",
+                  "name": "f60574ce907b7f0bce5d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -535,7 +535,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "56b5335d0339b71daa94",
+                  "name": "87584d4241c79226caec",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -550,7 +550,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "eec05eed336d3ec9e530",
+                  "name": "ae28a9679e1487fde1a4",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -645,7 +645,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6082a07b1b1b2044b778",
+                  "name": "8707d65a562c26fc4dd7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -685,7 +685,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "986b79cd69f7dc2b6428",
+                  "name": "11181e44ab5e3f084968",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -800,7 +800,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "68cc0686ade81b2a410a",
+                  "name": "c53d30e66a704239c64f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -894,7 +894,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b1c34e162c98f78caab6",
+                  "name": "3da3f2c363a1a9a5f6de",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1002,7 +1002,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e7f5504219b1b45f0a95",
+                  "name": "b7d9e6d3aaf04e72fe47",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1104,13 +1104,13 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ba8623b3bac67877a7f5",
+                  "name": "6a033e6c4a2b9ff7311d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DATOS POWER BI"
+                          "Entity": "xEmpresa"
                         }
                       },
                       "Property": "EMP"
@@ -1160,7 +1160,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DATOS POWER BI"
+                          "Entity": "xEmpresa"
                         }
                       },
                       "Property": "EMP"
@@ -1174,7 +1174,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0a1dcd2891dcac5a133a",
+                  "name": "7fdf3990c6034e9d8e75",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1290,7 +1290,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "2132a9e543ec24971268",
+                  "name": "d8ed0fa2cb073f773726",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1413,7 +1413,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "58cfb866cf0bb3ef044b",
+                  "name": "838feea782dbe25defab",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1516,7 +1516,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "dd78e72f0b1c21cae338",
+                  "name": "6b1390bba0f51be163f0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1556,7 +1556,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "62b5a9be92616c62f8e6",
+                  "name": "26df3137ff80abcd0549",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -1576,7 +1576,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "793cc2a0041f25cc8be8",
+                  "name": "e8e428bd784009817839",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -1596,7 +1596,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "05792b2766ccd06041a7",
+                  "name": "5e5239280cb78d11a4e1",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -1616,22 +1616,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4d10200fe0741ff76393",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DATOS POWER BI"
-                        }
-                      },
-                      "Property": "EMP"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "d9279c3ecf57b64a6b44",
+                  "name": "151730e61e3a2c74bd4f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1646,7 +1631,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a787426bf88f61c4bc7e",
+                  "name": "0a5f8d275081c5609251",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1661,7 +1646,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b06537244fde500edbb9",
+                  "name": "057f81c11092c2bcbcaa",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1671,6 +1656,21 @@
                         }
                       },
                       "Property": "Total ImpBruto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "055dbae36b80f1e7bb27",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "xEmpresa"
+                        }
+                      },
+                      "Property": "EMP"
                     }
                   },
                   "howCreated": 0
@@ -1703,7 +1703,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DATOS POWER BI"
+                          "Entity": "xEmpresa"
                         }
                       },
                       "Property": "EMP"
@@ -1776,7 +1776,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DATOS POWER BI"
+                          "Entity": "xEmpresa"
                         }
                       },
                       "Property": "EMP"
@@ -1830,21 +1830,9 @@
                   "levels": [
                     {
                       "queryRefs": [
-                        "DATOS POWER BI.EMP"
+                        "xEmpresa.EMP"
                       ],
                       "isCollapsed": true,
-                      "identityKeys": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "DATOS POWER BI"
-                              }
-                            },
-                            "Property": "EMP"
-                          }
-                        }
-                      ],
                       "isPinned": true
                     },
                     {
@@ -1885,7 +1873,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6ca6cb9150157e9462fe",
+                  "name": "bf2ba963fa0abcddf2de",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1900,7 +1888,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e36f99661d3c2cc52f81",
+                  "name": "865765b6d8e58aaeaf5f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1998,7 +1986,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "fc46952cb49b5c5df7bc",
+                  "name": "79cece0ed87974fa19a7",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -2018,7 +2006,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e7dba83ad8852fbb5905",
+                  "name": "9c55f50cebc6155d4279",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -2038,7 +2026,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "36e0e9b14bec58835d53",
+                  "name": "6fc505c0d24bad09628e",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -2058,7 +2046,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b1f5b2d97eda30d98a87",
+                  "name": "a536a8f82cec4a76f160",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2073,7 +2061,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f5b900a90c4573693a36",
+                  "name": "84853c67b6ee259ede9c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2117,7 +2105,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "cd9b520002254824bb49",
+                  "name": "807e9fed54fed6fe92a3",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -2137,7 +2125,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8fadd67a952806ca89e2",
+                  "name": "0d4ea28e65f38fa190ef",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -2157,7 +2145,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7c778f67eba56b3197fe",
+                  "name": "6eaacf82bed6af2f7345",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -2177,22 +2165,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7d85fb29d227a1d8e488",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DATOS POWER BI"
-                        }
-                      },
-                      "Property": "EMP"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "382d069da98b713c5a86",
+                  "name": "33051477d16e39cbea50",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2207,7 +2180,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b1485c2a3ec4d2999654",
+                  "name": "3ce60306a06f0ac38e6e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2222,7 +2195,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e6cdd7363176060e35ba",
+                  "name": "201055c18d2acf43c801",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2232,6 +2205,21 @@
                         }
                       },
                       "Property": "Total ImpBruto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1700ac492027b89f77f5",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "xEmpresa"
+                        }
+                      },
+                      "Property": "EMP"
                     }
                   },
                   "howCreated": 0
@@ -2264,7 +2252,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DATOS POWER BI"
+                          "Entity": "xEmpresa"
                         }
                       },
                       "Property": "EMP"
@@ -2337,7 +2325,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DATOS POWER BI"
+                          "Entity": "xEmpresa"
                         }
                       },
                       "Property": "EMP"
@@ -2391,21 +2379,9 @@
                   "levels": [
                     {
                       "queryRefs": [
-                        "DATOS POWER BI.EMP"
+                        "xEmpresa.EMP"
                       ],
                       "isCollapsed": true,
-                      "identityKeys": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "DATOS POWER BI"
-                              }
-                            },
-                            "Property": "EMP"
-                          }
-                        }
-                      ],
                       "isPinned": true
                     },
                     {
@@ -2446,22 +2422,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c4f91d15d3d5816bf79c",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Productos Grupo"
-                        }
-                      },
-                      "Property": "EMP"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "5fa31fffc7be9746c4e2",
+                  "name": "789c1f1ffa44f51714a1",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2471,6 +2432,21 @@
                         }
                       },
                       "Property": "Total ImpBruto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a83dc64904ce4683323c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "xEmpresa"
+                        }
+                      },
+                      "Property": "EMP"
                     }
                   },
                   "howCreated": 0
@@ -2501,7 +2477,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Productos Grupo"
+                          "Entity": "xEmpresa"
                         }
                       },
                       "Property": "EMP"
@@ -2527,7 +2503,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Productos Grupo"
+                          "Entity": "xEmpresa"
                         }
                       },
                       "Property": "EMP"
@@ -2559,7 +2535,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "653b7c9d9b530043d9a0",
+                  "name": "f95b313dbca0b034cc40",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -2579,7 +2555,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "744fc4760dc111e3ff04",
+                  "name": "850b18e09d82725e86b9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2594,7 +2570,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4ab593fc46c2e3d4eeaf",
+                  "name": "220e59168828e6d59368",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2609,7 +2585,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bf4985c211e5fb37a07d",
+                  "name": "cf9800e3abbb87712ccb",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2624,7 +2600,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f936a9afe7cf49320e19",
+                  "name": "61729c5783850843e396",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2639,7 +2615,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9b4fd7c93b5cd955e19b",
+                  "name": "57105671bac6ecf870df",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2654,22 +2630,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "fd26cdbc45b518c3d825",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DATOS POWER BI"
-                        }
-                      },
-                      "Property": "Empresa"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "28a90d5ca8cad472a2f6",
+                  "name": "a2a434002867f0e2dd54",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2684,7 +2645,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8041d2ca75203e67a5fe",
+                  "name": "f149b0637cdd1f6940ad",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2694,6 +2655,21 @@
                         }
                       },
                       "Property": "Total ImpBruto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b537c13b46a3c40f92a3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "xEmpresa"
+                        }
+                      },
+                      "Property": "EMP"
                     }
                   },
                   "howCreated": 0
@@ -2795,10 +2771,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DATOS POWER BI"
+                          "Entity": "xEmpresa"
                         }
                       },
-                      "Property": "Empresa"
+                      "Property": "EMP"
                     }
                   },
                   {
@@ -2892,21 +2868,9 @@
                     },
                     {
                       "queryRefs": [
-                        "DATOS POWER BI.Empresa"
+                        "xEmpresa.EMP"
                       ],
-                      "isCollapsed": true,
-                      "identityKeys": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "DATOS POWER BI"
-                              }
-                            },
-                            "Property": "Empresa"
-                          }
-                        }
-                      ]
+                      "isCollapsed": true
                     },
                     {
                       "queryRefs": [
@@ -2956,7 +2920,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "2e7fa83f2eb878be7a82",
+                  "name": "7afe080505f5f8602ce9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2971,7 +2935,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0bfc0f73b2583d5b7c96",
+                  "name": "f78a94de9aada03d59fc",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2986,7 +2950,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "392471f71d3acf331e98",
+                  "name": "e23b4885e6b910b3b6f9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3001,7 +2965,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "22aac769b9ab7c22be15",
+                  "name": "faf4cd721c128193e740",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3016,7 +2980,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "00979779877dba55bec4",
+                  "name": "b6e29f7300495e9563fe",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3055,7 +3019,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "397240a1d27d4d1604e8",
+                  "name": "66be411bd8f991f33379",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3070,7 +3034,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e557fbc2c9070d727494",
+                  "name": "5dc98c2e2925c42e16bd",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3085,7 +3049,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "cfc6a9f2b216a9f678ae",
+                  "name": "3cca0824b17d5c7dedc2",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3139,7 +3103,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "696e7573f338bfe8dda9",
+                  "name": "e7bc7a3ea94cba09efe9",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -3159,7 +3123,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "698c43e824cf77b95d9e",
+                  "name": "e4cccd6be33d3bf75ceb",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -3179,7 +3143,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "70911668e0efdf331a73",
+                  "name": "8ccce3cf0ac48ba26bfe",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -3199,22 +3163,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "57273d7153e6dac92d23",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DATOS POWER BI"
-                        }
-                      },
-                      "Property": "EMP"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "49f5a443712032c3cf1b",
+                  "name": "83a38ff43f2549c54fb5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3229,7 +3178,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "999d53857b4af855046b",
+                  "name": "9fb9d3e54c7ffb4ee306",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3244,7 +3193,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "111c0d0c4d3e1d9f2af5",
+                  "name": "bdfd1ec03dc3d3969c43",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3259,7 +3208,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7882a3a49437b35be5bf",
+                  "name": "7b12e7c2d63ebe149c36",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3274,7 +3223,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b24a21c2f28898d4fb5a",
+                  "name": "4b984d8751cff9691a95",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3284,6 +3233,21 @@
                         }
                       },
                       "Property": "Premium Price"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "220d2674f307300dfeeb",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "xEmpresa"
+                        }
+                      },
+                      "Property": "EMP"
                     }
                   },
                   "howCreated": 0
@@ -3316,7 +3280,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DATOS POWER BI"
+                          "Entity": "xEmpresa"
                         }
                       },
                       "Property": "EMP"
@@ -3332,21 +3296,9 @@
                   "levels": [
                     {
                       "queryRefs": [
-                        "DATOS POWER BI.EMP"
+                        "xEmpresa.EMP"
                       ],
                       "isCollapsed": true,
-                      "identityKeys": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "DATOS POWER BI"
-                              }
-                            },
-                            "Property": "EMP"
-                          }
-                        }
-                      ],
                       "isPinned": true
                     },
                     {
@@ -3438,6 +3390,124 @@
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
+            }
+          },
+          "3ab3d797facf38f62690": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7a4def7e2d59436e2c7a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "xRLS"
+                        }
+                      },
+                      "Property": "Email"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "x",
+                                "Entity": "xRLS",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "x"
+                                            }
+                                          },
+                                          "Property": "Email"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'ism@rcfcapital.com.br'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "xRLS"
+                        }
+                      },
+                      "Property": "Email"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
             }
           }
         },

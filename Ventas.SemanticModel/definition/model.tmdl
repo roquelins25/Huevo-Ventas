@@ -16,7 +16,7 @@ queryGroup Dimensões
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["DATOS POWER BI","Productos Grupo","Intercos","Rappel","Medias Inprovo","Tamanos_Agrupados","tipo_huevo","_Medidas","FxSemana"]
+annotation PBI_QueryOrder = ["DATOS POWER BI","Productos Grupo","Intercos","Rappel","Medias Inprovo","Tamanos_Agrupados","tipo_huevo","Data Hora Atualização","_Medidas","FxSemana","xRLS"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -30,6 +30,10 @@ ref table Tamanos_Agrupados
 ref table tipo_huevo
 ref table _Medidas
 ref table xParametro
+ref table yAcess
+ref table xRLS
+ref table xEmpresa
+ref table 'Data Hora Atualização'
 
 ref cultureInfo pt-BR
 

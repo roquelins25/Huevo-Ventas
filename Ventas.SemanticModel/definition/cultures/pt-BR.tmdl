@@ -955,6 +955,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "emp": {
@@ -2572,16 +2575,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.582
 			          }
-			        },
-			        {
-			          "Imp. Neto": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -3471,23 +3464,522 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "y_acess": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "yAcess"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "y acess": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "yAcess": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.8613
+			          }
+			        }
+			      ]
+			    },
+			    "y_acess.y_acess": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "yAcess",
+			          "ConceptualProperty": "yAcess"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "y acess": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yAcess": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "y_acess.valor_yAcess": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "yAcess",
+			          "ConceptualProperty": "Valor yAcess"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor yAcess": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "x_RL": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "xRLS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "x RL": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "xRLS": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "RL": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "x_RL.company": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "xRLS",
+			          "ConceptualProperty": "Company"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "company": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "co": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corporation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "corps": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "employer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "enterprise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "business": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "conglomerate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "co inc": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "x_RL.email": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "xRLS",
+			          "ConceptualProperty": "Email"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "email": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "correspondence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "communication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "x_RL.password": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "xRLS",
+			          "ConceptualProperty": "Password"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "password": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "watchword": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "keyword": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "PIN": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "x_RL.indice": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "xRLS",
+			          "ConceptualProperty": "Indice"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "indice": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "x_RL.password_acess": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "xRLS",
+			          "ConceptualProperty": "Password Acess"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "password acess": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "x_empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "xEmpresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "x empresa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "xEmpresa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "x_empresa.emp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "xEmpresa",
+			          "ConceptualProperty": "EMP"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "emp": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "data_hora_atualização": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Data Hora Atualização"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data hora atualização": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information hora atualização": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact hora atualização": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info hora atualização": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic hora atualização": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document hora atualização": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure hora atualização": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record hora atualização": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "data_hora_atualização.refresh_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Data Hora Atualização",
+			          "ConceptualProperty": "Refresh Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "refresh date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "refresh moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "refresh period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
 			    }
 			  },
 			  "Relationships": {
-			    "medias_inprovo_has_tipo_huevo": {
+			    "y_acess_has_x_RL_password_acess": {
 			      "Binding": {
-			        "ConceptualEntity": "Medias Inprovo"
+			        "ConceptualEntity": "yAcess"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "medias_inprovo": {
+			        "y_acess": {
 			          "Target": {
-			            "Entity": "medias_inprovo"
+			            "Entity": "y_acess"
 			          }
 			        },
-			        "tipo_huevo": {
+			        "x_RL.password_acess": {
 			          "Target": {
-			            "Entity": "tipo_huevo"
+			            "Entity": "x_RL.password_acess"
 			          }
 			        }
 			      },
@@ -3495,45 +3987,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "medias_inprovo"
+			              "Role": "y_acess"
 			            },
 			            "Object": {
-			              "Role": "tipo_huevo"
+			              "Role": "x_RL.password_acess"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medias_inprovos_have_tipo_huevos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tipo_huevo"
-			            },
-			            "Object": {
-			              "Role": "medias_inprovo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tipo_huevos_have_medias_inprovos"
+			          "ID": "y_acesses_have_password_acess"
 			        }
 			      ]
 			    },
-			    "productos_grupo_has_tamanos_agrupado": {
+			    "x_RL_has_password_acess": {
 			      "Binding": {
-			        "ConceptualEntity": "Productos Grupo"
+			        "ConceptualEntity": "xRLS"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "productos_grupo": {
+			        "x_RL": {
 			          "Target": {
-			            "Entity": "productos_grupo"
+			            "Entity": "x_RL"
 			          }
 			        },
-			        "tamanos_agrupado": {
+			        "x_RL.password_acess": {
 			          "Target": {
-			            "Entity": "tamanos_agrupado"
+			            "Entity": "x_RL.password_acess"
 			          }
 			        }
 			      },
@@ -3541,45 +4020,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "productos_grupo"
+			              "Role": "x_RL"
 			            },
 			            "Object": {
-			              "Role": "tamanos_agrupado"
+			              "Role": "x_RL.password_acess"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "productos_grupos_have_tamanos_agrupados"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tamanos_agrupado"
-			            },
-			            "Object": {
-			              "Role": "productos_grupo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tamanos_agrupados_have_productos_grupos"
+			          "ID": "x_RLs_have_password_acess"
 			        }
 			      ]
 			    },
-			    "productos_grupo_has_tipo_huevo": {
+			    "x_RL_has_indice": {
 			      "Binding": {
-			        "ConceptualEntity": "Productos Grupo"
+			        "ConceptualEntity": "xRLS"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "productos_grupo": {
+			        "x_RL": {
 			          "Target": {
-			            "Entity": "productos_grupo"
+			            "Entity": "x_RL"
 			          }
 			        },
-			        "tipo_huevo": {
+			        "x_RL.indice": {
 			          "Target": {
-			            "Entity": "tipo_huevo"
+			            "Entity": "x_RL.indice"
 			          }
 			        }
 			      },
@@ -3587,45 +4053,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "productos_grupo"
+			              "Role": "x_RL"
 			            },
 			            "Object": {
-			              "Role": "tipo_huevo"
+			              "Role": "x_RL.indice"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "productos_grupos_have_tipo_huevos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tipo_huevo"
-			            },
-			            "Object": {
-			              "Role": "productos_grupo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tipo_huevos_have_productos_grupos"
+			          "ID": "x_RLs_have_indices"
 			        }
 			      ]
 			    },
-			    "datos_power_bi_has_calendario_dax": {
+			    "x_RL_has_password": {
 			      "Binding": {
-			        "ConceptualEntity": "DATOS POWER BI"
+			        "ConceptualEntity": "xRLS"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "datos_power_bi": {
+			        "x_RL": {
 			          "Target": {
-			            "Entity": "datos_power_bi"
+			            "Entity": "x_RL"
 			          }
 			        },
-			        "calendario_dax": {
+			        "x_RL.password": {
 			          "Target": {
-			            "Entity": "calendario_dax"
+			            "Entity": "x_RL.password"
 			          }
 			        }
 			      },
@@ -3633,45 +4086,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "datos_power_bi"
+			              "Role": "x_RL"
 			            },
 			            "Object": {
-			              "Role": "calendario_dax"
+			              "Role": "x_RL.password"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datos_power_bi_have_calendario_dax"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_dax"
-			            },
-			            "Object": {
-			              "Role": "datos_power_bi"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_dax_have_datos_power_bi"
+			          "ID": "x_RLs_have_passwords"
 			        }
 			      ]
 			    },
-			    "datos_power_bi_has_rappel": {
+			    "x_RL_has_email": {
 			      "Binding": {
-			        "ConceptualEntity": "DATOS POWER BI"
+			        "ConceptualEntity": "xRLS"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "datos_power_bi": {
+			        "x_RL": {
 			          "Target": {
-			            "Entity": "datos_power_bi"
+			            "Entity": "x_RL"
 			          }
 			        },
-			        "rappel": {
+			        "x_RL.email": {
 			          "Target": {
-			            "Entity": "rappel"
+			            "Entity": "x_RL.email"
 			          }
 			        }
 			      },
@@ -3679,98 +4119,65 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "datos_power_bi"
+			              "Role": "x_RL"
 			            },
 			            "Object": {
-			              "Role": "rappel"
+			              "Role": "x_RL.email"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datos_power_bi_have_rappels"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "rappel"
-			            },
-			            "Object": {
-			              "Role": "datos_power_bi"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "rappels_have_datos_power_bi"
+			          "ID": "x_RLs_have_emails"
 			        }
 			      ]
 			    },
-			    "datos_power_bi_has_interco": {
+			    "y_acess_has_valor_yAcess": {
 			      "Binding": {
-			        "ConceptualEntity": "DATOS POWER BI"
+			        "ConceptualEntity": "yAcess"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "datos_power_bi": {
+			        "y_acess": {
 			          "Target": {
-			            "Entity": "datos_power_bi"
+			            "Entity": "y_acess"
 			          }
 			        },
-			        "interco": {
+			        "y_acess.valor_yAcess": {
 			          "Target": {
-			            "Entity": "interco"
-			          },
-			          "Nouns": [
-			            {
-			              "CALC interco": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			            "Entity": "y_acess.valor_yAcess"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "datos_power_bi"
+			              "Role": "y_acess"
 			            },
 			            "Object": {
-			              "Role": "interco"
+			              "Role": "y_acess.valor_yAcess"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datos_power_bi_have_interco"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "interco"
-			            },
-			            "Object": {
-			              "Role": "datos_power_bi"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "interco_have_datos_power_bi"
+			          "ID": "y_acesses_have_valor_yAcess"
 			        }
 			      ]
 			    },
-			    "datos_power_bi_has_productos_grupo": {
+			    "y_acess_has_y_acess": {
 			      "Binding": {
-			        "ConceptualEntity": "DATOS POWER BI"
+			        "ConceptualEntity": "yAcess"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "datos_power_bi": {
+			        "y_acess": {
 			          "Target": {
-			            "Entity": "datos_power_bi"
+			            "Entity": "y_acess"
 			          }
 			        },
-			        "productos_grupo": {
+			        "y_acess.y_acess": {
 			          "Target": {
-			            "Entity": "productos_grupo"
+			            "Entity": "y_acess.y_acess"
 			          }
 			        }
 			      },
@@ -3778,28 +4185,15 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "datos_power_bi"
+			              "Role": "y_acess"
 			            },
 			            "Object": {
-			              "Role": "productos_grupo"
+			              "Role": "y_acess.y_acess"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datos_power_bi_have_productos_grupos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "productos_grupo"
-			            },
-			            "Object": {
-			              "Role": "datos_power_bi"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "productos_grupos_have_datos_power_bi"
+			          "ID": "y_acesses_have_y_acesses"
 			        }
 			      ]
 			    },
@@ -6544,39 +6938,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "datos_power_bi_has_emp": {
-			      "Binding": {
-			        "ConceptualEntity": "DATOS POWER BI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "datos_power_bi": {
-			          "Target": {
-			            "Entity": "datos_power_bi"
-			          }
-			        },
-			        "datos_power_bi.emp": {
-			          "Target": {
-			            "Entity": "datos_power_bi.emp"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "datos_power_bi"
-			            },
-			            "Object": {
-			              "Role": "datos_power_bi.emp"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "datos_power_bi_have_emps"
-			        }
-			      ]
-			    },
 			    "datos_power_bi_has_margen": {
 			      "Binding": {
 			        "ConceptualEntity": "DATOS POWER BI"
@@ -7798,6 +8159,48 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "data_hora_atualização_is_refreshed_on_refresh_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Data Hora Atualização"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "data_hora_atualização": {
+			          "Target": {
+			            "Entity": "data_hora_atualização"
+			          }
+			        },
+			        "data_hora_atualização.refresh_date": {
+			          "Target": {
+			            "Entity": "data_hora_atualização.refresh_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "data_hora_atualização.refresh_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "refresh": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "data_hora_atualização"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "data_hora_atualizaçãos_are_refreshed_on_refresh_dates"
+			        }
+			      ]
+			    },
 			    "datos_power_bi_is_intercompany": {
 			      "Binding": {
 			        "ConceptualEntity": "DATOS POWER BI"
@@ -7848,6 +8251,447 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "x_empresa_has_emp": {
+			      "Binding": {
+			        "ConceptualEntity": "xEmpresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "x_empresa": {
+			          "Target": {
+			            "Entity": "x_empresa"
+			          }
+			        },
+			        "x_empresa.emp": {
+			          "Target": {
+			            "Entity": "x_empresa.emp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "x_empresa"
+			            },
+			            "Object": {
+			              "Role": "x_empresa.emp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "x_empresas_have_emps"
+			        }
+			      ]
+			    },
+			    "data_hora_atualização_has_refresh_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Data Hora Atualização"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "data_hora_atualização": {
+			          "Target": {
+			            "Entity": "data_hora_atualização"
+			          }
+			        },
+			        "data_hora_atualização.refresh_date": {
+			          "Target": {
+			            "Entity": "data_hora_atualização.refresh_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "data_hora_atualização"
+			            },
+			            "Object": {
+			              "Role": "data_hora_atualização.refresh_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_hora_atualizaçãos_have_refresh_dates"
+			        }
+			      ]
+			    },
+			    "datos_power_bi_has_productos_grupo": {
+			      "Binding": {
+			        "ConceptualEntity": "DATOS POWER BI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datos_power_bi": {
+			          "Target": {
+			            "Entity": "datos_power_bi"
+			          }
+			        },
+			        "productos_grupo": {
+			          "Target": {
+			            "Entity": "productos_grupo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datos_power_bi"
+			            },
+			            "Object": {
+			              "Role": "productos_grupo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datos_power_bi_have_productos_grupos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "productos_grupo"
+			            },
+			            "Object": {
+			              "Role": "datos_power_bi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "productos_grupos_have_datos_power_bi"
+			        }
+			      ]
+			    },
+			    "datos_power_bi_has_interco": {
+			      "Binding": {
+			        "ConceptualEntity": "DATOS POWER BI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datos_power_bi": {
+			          "Target": {
+			            "Entity": "datos_power_bi"
+			          }
+			        },
+			        "interco": {
+			          "Target": {
+			            "Entity": "interco"
+			          },
+			          "Nouns": [
+			            {
+			              "CALC interco": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datos_power_bi"
+			            },
+			            "Object": {
+			              "Role": "interco"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datos_power_bi_have_interco"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "interco"
+			            },
+			            "Object": {
+			              "Role": "datos_power_bi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "interco_have_datos_power_bi"
+			        }
+			      ]
+			    },
+			    "datos_power_bi_has_rappel": {
+			      "Binding": {
+			        "ConceptualEntity": "DATOS POWER BI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datos_power_bi": {
+			          "Target": {
+			            "Entity": "datos_power_bi"
+			          }
+			        },
+			        "rappel": {
+			          "Target": {
+			            "Entity": "rappel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datos_power_bi"
+			            },
+			            "Object": {
+			              "Role": "rappel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datos_power_bi_have_rappels"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rappel"
+			            },
+			            "Object": {
+			              "Role": "datos_power_bi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rappels_have_datos_power_bi"
+			        }
+			      ]
+			    },
+			    "datos_power_bi_has_calendario_dax": {
+			      "Binding": {
+			        "ConceptualEntity": "DATOS POWER BI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datos_power_bi": {
+			          "Target": {
+			            "Entity": "datos_power_bi"
+			          }
+			        },
+			        "calendario_dax": {
+			          "Target": {
+			            "Entity": "calendario_dax"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datos_power_bi"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datos_power_bi_have_calendario_dax"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax"
+			            },
+			            "Object": {
+			              "Role": "datos_power_bi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_dax_have_datos_power_bi"
+			        }
+			      ]
+			    },
+			    "datos_power_bi_has_x_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "DATOS POWER BI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datos_power_bi": {
+			          "Target": {
+			            "Entity": "datos_power_bi"
+			          }
+			        },
+			        "x_empresa": {
+			          "Target": {
+			            "Entity": "x_empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datos_power_bi"
+			            },
+			            "Object": {
+			              "Role": "x_empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datos_power_bi_have_x_empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "x_empresa"
+			            },
+			            "Object": {
+			              "Role": "datos_power_bi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "x_empresas_have_datos_power_bi"
+			        }
+			      ]
+			    },
+			    "productos_grupo_has_tipo_huevo": {
+			      "Binding": {
+			        "ConceptualEntity": "Productos Grupo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "productos_grupo": {
+			          "Target": {
+			            "Entity": "productos_grupo"
+			          }
+			        },
+			        "tipo_huevo": {
+			          "Target": {
+			            "Entity": "tipo_huevo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "productos_grupo"
+			            },
+			            "Object": {
+			              "Role": "tipo_huevo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "productos_grupos_have_tipo_huevos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tipo_huevo"
+			            },
+			            "Object": {
+			              "Role": "productos_grupo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tipo_huevos_have_productos_grupos"
+			        }
+			      ]
+			    },
+			    "productos_grupo_has_tamanos_agrupado": {
+			      "Binding": {
+			        "ConceptualEntity": "Productos Grupo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "productos_grupo": {
+			          "Target": {
+			            "Entity": "productos_grupo"
+			          }
+			        },
+			        "tamanos_agrupado": {
+			          "Target": {
+			            "Entity": "tamanos_agrupado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "productos_grupo"
+			            },
+			            "Object": {
+			              "Role": "tamanos_agrupado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "productos_grupos_have_tamanos_agrupados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tamanos_agrupado"
+			            },
+			            "Object": {
+			              "Role": "productos_grupo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tamanos_agrupados_have_productos_grupos"
+			        }
+			      ]
+			    },
+			    "medias_inprovo_has_tipo_huevo": {
+			      "Binding": {
+			        "ConceptualEntity": "Medias Inprovo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medias_inprovo": {
+			          "Target": {
+			            "Entity": "medias_inprovo"
+			          }
+			        },
+			        "tipo_huevo": {
+			          "Target": {
+			            "Entity": "tipo_huevo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medias_inprovo"
+			            },
+			            "Object": {
+			              "Role": "tipo_huevo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medias_inprovos_have_tipo_huevos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tipo_huevo"
+			            },
+			            "Object": {
+			              "Role": "medias_inprovo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tipo_huevos_have_medias_inprovos"
+			        }
+			      ]
+			    },
 			    "medias_inprovo_has_calendario_dax": {
 			      "Binding": {
 			        "ConceptualEntity": "Medias Inprovo"
@@ -7891,6 +8735,52 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "calendario_dax_have_medias_inprovos"
+			        }
+			      ]
+			    },
+			    "x_RL_has_x_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "xRLS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "x_RL": {
+			          "Target": {
+			            "Entity": "x_RL"
+			          }
+			        },
+			        "x_empresa": {
+			          "Target": {
+			            "Entity": "x_empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "x_RL"
+			            },
+			            "Object": {
+			              "Role": "x_empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "x_RLs_have_x_empresas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "x_empresa"
+			            },
+			            "Object": {
+			              "Role": "x_RL"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "x_empresas_have_x_RLs"
 			        }
 			      ]
 			    },

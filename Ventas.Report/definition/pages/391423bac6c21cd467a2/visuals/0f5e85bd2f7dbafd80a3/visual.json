@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Productos Grupo"
+                      "Entity": "xEmpresa"
                     }
                   },
                   "Property": "EMP"
                 }
               },
-              "queryRef": "Productos Grupo.EMP",
+              "queryRef": "xEmpresa.EMP",
               "nativeQueryRef": "EMP",
               "active": true
             }
@@ -42,12 +42,12 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total ImpBruto"
+                  "Property": "Total ImpNeto"
                 }
               },
-              "queryRef": "_Medidas.Total ImpBruto",
-              "nativeQueryRef": "Imp. Bruto",
-              "displayName": "Imp. Bruto"
+              "queryRef": "_Medidas.Total ImpNeto",
+              "nativeQueryRef": "Imp. Neto",
+              "displayName": "Imp. Neto"
             }
           ],
           "fieldParameters": [
@@ -78,7 +78,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Total ImpBruto"
+                "Property": "Total ImpNeto"
               }
             },
             "direction": "Descending"

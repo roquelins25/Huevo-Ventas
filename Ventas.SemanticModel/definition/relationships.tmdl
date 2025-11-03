@@ -30,3 +30,12 @@ relationship eea4e001-8745-4cd2-d9ee-96bbe3633d7e
 	fromColumn: 'Medias Inprovo'.Date
 	toColumn: 'CALENDARIO DAX'.Date
 
+relationship 85f89d35-c410-70a9-b99d-fe64192b27a9
+	fromColumn: 'DATOS POWER BI'.EMP
+	toColumn: xEmpresa.EMP
+
+relationship e90ad8ea-7433-eb9d-9270-045965caaa3c
+	crossFilteringBehavior: bothDirections
+	fromColumn: xRLS.Company
+	toColumn: xEmpresa.EMP
+

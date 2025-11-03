@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "42788d94bcb4d2b6b327",
+  "position": {
+    "x": 449.77556109725685,
+    "y": 505.43640897755608,
+    "z": 0,
+    "height": 40.399002493765586,
+    "width": 280.09975062344137
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "yAcess"
+                    }
+                  },
+                  "Property": "yAcess"
+                }
+              },
+              "queryRef": "yAcess.yAcess",
+              "nativeQueryRef": "yAcess",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "slider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "data": [
+        {
+          "properties": {}
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

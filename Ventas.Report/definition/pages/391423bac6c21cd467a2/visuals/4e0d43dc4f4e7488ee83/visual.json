@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DATOS POWER BI"
+                      "Entity": "xEmpresa"
                     }
                   },
                   "Property": "EMP"
                 }
               },
-              "queryRef": "DATOS POWER BI.EMP",
+              "queryRef": "xEmpresa.EMP",
               "nativeQueryRef": "EMP",
               "active": true
             }

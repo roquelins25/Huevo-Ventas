@@ -1,0 +1,26 @@
+table yAcess
+	lineageTag: 3658ca6f-6050-4b40-a76e-fd72ec5830c9
+
+	measure 'Valor yAcess' = SELECTEDVALUE('yAcess'[yAcess], 1)
+		formatString: 0
+		lineageTag: 49cd609c-8c90-429e-9658-13551dc74554
+
+	column yAcess
+		formatString: 0
+		lineageTag: 0191d5a4-e61e-4686-b376-21603792aa8e
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition yAcess = calculated
+		mode: import
+		source = GENERATESERIES(123000, 123999, 1)
+
+	annotation PBI_Id = d6f24fefb63845dea77d53b9e7bfef04
+

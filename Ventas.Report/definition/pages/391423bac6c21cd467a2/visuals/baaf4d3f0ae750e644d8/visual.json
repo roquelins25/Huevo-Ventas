@@ -83,13 +83,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DATOS POWER BI"
+                      "Entity": "xEmpresa"
                     }
                   },
                   "Property": "EMP"
                 }
               },
-              "queryRef": "DATOS POWER BI.EMP",
+              "queryRef": "xEmpresa.EMP",
               "nativeQueryRef": "EMP",
               "active": true
             },
@@ -170,21 +170,9 @@
         "levels": [
           {
             "queryRefs": [
-              "DATOS POWER BI.EMP"
+              "xEmpresa.EMP"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DATOS POWER BI"
-                    }
-                  },
-                  "Property": "EMP"
-                }
-              }
-            ],
             "isPinned": true
           },
           {

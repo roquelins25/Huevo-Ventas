@@ -1,0 +1,27 @@
+table 'Data Hora Atualização'
+	lineageTag: 7f36f6c6-aeaa-4365-9470-a5f3adca5535
+
+	column 'Refresh Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 83178ed6-5643-4486-98c4-281eead371c2
+		summarizeBy: none
+		sourceColumn: Refresh Date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Data Hora Atualização' = m
+		mode: import
+		source =
+				let
+				    Fonte = DateTimeZone.SwitchZone(DateTimeZone.LocalNow(),-3),
+				    #"Convertido para Tabela" = #table(1, {{Fonte}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Convertido para Tabela",{{"Column1", "Refresh Date"}}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Renomeadas",{{"Refresh Date", type datetimezone}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

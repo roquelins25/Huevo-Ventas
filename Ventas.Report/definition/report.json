@@ -70,13 +70,18 @@
           "type": "CustomTheme"
         },
         {
-          "name": "HOME9559065121423664.png",
-          "path": "HOME9559065121423664.png",
+          "name": "Hevo_-_Home6137636080894782.png",
+          "path": "Hevo_-_Home6137636080894782.png",
           "type": "Image"
         },
         {
-          "name": "Hevo_-_Home6137636080894782.png",
-          "path": "Hevo_-_Home6137636080894782.png",
+          "name": "Login_Hevo17166829391780736.png",
+          "path": "Login_Hevo17166829391780736.png",
+          "type": "Image"
+        },
+        {
+          "name": "Login_incorrect__Hevo2235805376178196.png",
+          "path": "Login_incorrect__Hevo2235805376178196.png",
           "type": "Image"
         }
       ]
