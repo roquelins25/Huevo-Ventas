@@ -1,0 +1,61 @@
+table Intercos
+	lineageTag: 062f924a-e6db-4073-9af4-2728725f5102
+
+	column Nº
+		dataType: string
+		lineageTag: 9f3c261c-cae7-4895-a3f9-9141cc71c3fb
+		summarizeBy: none
+		sourceColumn: Nº
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		dataType: string
+		lineageTag: 0e4d2d4d-2af3-4808-a5ce-4fe6faecd40e
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Empresa
+		dataType: string
+		lineageTag: a0b2e201-9575-4304-a07f-5ef941f7ed22
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo
+		dataType: string
+		lineageTag: 25cf8c38-5f10-4d90-8b92-2cca2019b51b
+		summarizeBy: none
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CALC cliente'
+		dataType: string
+		lineageTag: 765c6c2c-c20b-435f-872f-16e8cb5d03ca
+		summarizeBy: none
+		sourceColumn: CALC cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Intercos = m
+		mode: import
+		queryGroup: Dimensões
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Generales - Master"),
+				    #"Personalização Adicionada" = Table.AddColumn(Fonte, "Table", each Excel.Workbook([Content],true){[Name="Intercos"]}[Data]),
+				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Personalização Adicionada",{"Table"}),
+				    #"Table Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Table", {"Nº", "Nombre", "Empresa", "Tipo"}, {"Nº", "Nombre", "Empresa", "Tipo"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Table Expandido",{{"Nº", type text}, {"Nombre", type text}, {"Empresa", type text}, {"Tipo", type text}}),
+				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Tipo Alterado", "CALC cliente", each Text.Combine({[Empresa], [Nº]}, ""), type text)
+				in
+				    #"Coluna Mesclada Inserida"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

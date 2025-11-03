@@ -18,20 +18,26 @@ table 'DATOS POWER BI'
 		annotation SummarizationSetBy = Automatic
 
 	column Fecha
-		dataType: string
+		dataType: dateTime
+		formatString: Short Date
 		lineageTag: d4a6488a-0990-4f03-8544-31c79b43b293
 		summarizeBy: none
 		sourceColumn: Fecha
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Competencia
-		dataType: string
+		dataType: dateTime
+		formatString: Short Date
 		lineageTag: 69a557dd-65aa-4bc0-865a-611ee4a2635e
 		summarizeBy: none
 		sourceColumn: Competencia
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column 'Tipo Documento'
 		dataType: string
@@ -178,124 +184,154 @@ table 'DATOS POWER BI'
 		annotation SummarizationSetBy = Automatic
 
 	column Cantidad
-		dataType: string
+		dataType: double
 		lineageTag: b8e96b58-a23f-4406-b847-17e3b06a2239
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Cantidad
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Bultos
-		dataType: string
+		dataType: double
 		lineageTag: bee9bac9-1a56-426d-afbd-b3bd23b9154a
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Bultos
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Docenas
-		dataType: string
+		dataType: double
 		lineageTag: c4b2d4df-c9ee-4105-a20f-4b97c3688cb9
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Docenas
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'Imp. Unitario'
-		dataType: string
+		dataType: double
 		lineageTag: ccd0e606-af47-419e-95e7-4cd1817222fa
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Imp. Unitario
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'Imp. Bruto'
-		dataType: string
+		dataType: double
 		lineageTag: 3f202c6d-3559-4ce8-8b89-722d90a234df
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Imp. Bruto
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'Imp. Bruto/Docenas'
-		dataType: string
+		dataType: double
 		lineageTag: 4307b2a0-3f40-4980-a764-0f57a4fc8b3d
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Imp. Bruto/Docenas
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column '% Dto. Línea'
-		dataType: string
+		dataType: double
 		lineageTag: ffe1cd8b-0b41-4493-91cf-9c53a231f0f5
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: % Dto. Línea
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'Imp. Neto'
-		dataType: string
+		dataType: double
 		lineageTag: 3d8f07cf-7cc7-4126-abe4-9e13f3abc631
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Imp. Neto
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'Imp. Neto / Docenas'
-		dataType: string
+		dataType: double
 		lineageTag: e6bc9dfb-ea3b-4c26-b664-5cfc0306678a
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Imp. Neto / Docenas
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'Total Dto.'
-		dataType: string
+		dataType: double
 		lineageTag: e6bb78b2-614e-42c3-b0a0-df3a9a6782b6
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Total Dto.
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'Total Linea'
-		dataType: string
+		dataType: double
 		lineageTag: 2eb2aabd-5c2a-44f5-847d-74c5411ca06f
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Total Linea
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'Imp. Pdte'
-		dataType: string
+		dataType: double
 		lineageTag: b63e3ead-066f-4e01-aead-8b95416bf74b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Imp. Pdte
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'Imp. Pdte. Fact'
-		dataType: string
+		dataType: double
 		lineageTag: 508369ad-d935-4b28-9454-cbb779f00b90
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Imp. Pdte. Fact
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Coste
-		dataType: string
+		dataType: double
 		lineageTag: 099bb911-1a53-43bc-ac4f-eadc1ec02a13
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Coste
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Margen
-		dataType: string
+		dataType: double
 		lineageTag: 5ca2deb7-57b2-486e-9002-bebb6d0bad49
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Margen
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column EMP
 		dataType: string
@@ -330,33 +366,68 @@ table 'DATOS POWER BI'
 		annotation SummarizationSetBy = Automatic
 
 	column 'Docenas OK'
-		dataType: string
+		dataType: double
 		lineageTag: 084c440f-46e3-4c77-a699-4b78b96e0c63
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Docenas OK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'CALC Interco'
+		dataType: string
+		lineageTag: 0c7d43c2-3786-4d79-af00-c400d883a8c3
+		summarizeBy: none
+		sourceColumn: CALC Interco
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Forma Cria Final' =
+			
+			IF(
+			    NOT( ISBLANK( RELATED( 'Productos Grupo'[Forma Cría] ) ) ),
+			        RELATED('Productos Grupo'[Forma Cría] ),
+			'DATOS POWER BI'[Forma Cría]
+			)
+		lineageTag: d9984e09-cb05-4787-8134-a4e15d38ab56
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Intercompany =
+			
+			IF( 'DATOS POWER BI'[CALC Interco] = RELATED( Intercos[CALC cliente] ), TRUE(), FALSE() )
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2149cfd1-cf8b-41b4-b7dc-284b734dd6de
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
 	partition 'DATOS POWER BI' = m
 		mode: import
+		queryGroup: Fatos
 		source = ```
 				let
 				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\DATOS POWER BI"),
 				    #"Personalização Adicionada" = Table.AddColumn(Fonte, "Table", each Excel.Workbook([Content],true){[Name = "Export"]}[Data]),
 				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Personalização Adicionada",{"Name", "Table"}),
 				    #"Table Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Table", {"Empresa", "Fecha", "Competencia", "Tipo Documento", "Nº Doc", "Tipo", "Nº Línea", "Comercial", "Cód. Cliente", "Cliente", "Grupo Cliente", "Provincia", "Categ. Producto", "Cód. Producto", "Producto", "Tipo Producto", "Formato Envase", "Forma Cría", "Tamaño", "Sub-Tamaño ", "Color Producto", "Cantidad", "Bultos", "Docenas", "Imp. Unitario", "Imp. Bruto", "Imp. Bruto/Docenas", "% Dto. Línea", "Imp. Neto", "Imp. Neto / Docenas", "Total Dto.", "Total Linea", "Imp. Pdte", "Imp. Pdte. Fact", "Coste", "Margen"}, {"Empresa", "Fecha", "Competencia", "Tipo Documento", "Nº Doc", "Tipo", "Nº Línea", "Comercial", "Cód. Cliente", "Cliente", "Grupo Cliente", "Provincia", "Categ. Producto", "Cód. Producto", "Producto", "Tipo Producto", "Formato Envase", "Forma Cría", "Tamaño", "Sub-Tamaño ", "Color Producto", "Cantidad", "Bultos", "Docenas", "Imp. Unitario", "Imp. Bruto", "Imp. Bruto/Docenas", "% Dto. Línea", "Imp. Neto", "Imp. Neto / Docenas", "Total Dto.", "Total Linea", "Imp. Pdte", "Imp. Pdte. Fact", "Coste", "Margen"}),
-				    #"Linhas Filtradas" = Table.SelectRows(#"Table Expandido", each ([Cód. Producto] <> null)),
-				    Empresa = Table.AddColumn(#"Linhas Filtradas", "EMP", each if [Empresa] = "Dagu, S.A" then "Dagu" else
-				if [Empresa] = "El Granjero, S.L." then "Granjero" else
-				if [Empresa] = "GRANJA AGAS, S.A.U" then "Agas" else
-				if [Empresa] = "Granja Legaria, S.L." then "Legaria" else
-				if [Empresa] = "Larrabe Oilotegia, S.L." then "Larrabe" else
-				if [Empresa] = "Ous Roig Tortosa, S.A." then "Roig" else "0"),
-				    #"Link Producto" = Table.AddColumn(Empresa, "LINK Producto", each [EMP] & [Cód. Producto]),
-				    #"Link Rappel" = Table.AddColumn(#"Link Producto", "LINK Rappel", each [EMP] & [Cód. Cliente]),
+				    Empresa = Table.AddColumn(#"Table Expandido", "EMP", 
+				each if [Empresa] = "Ous Roig Tortosa, S.A." then "Roig" else 
+				if [Empresa] = "Dagu, S.A" then "Dagu" else 
+				if [Empresa] = "GRANJA AGAS, S.A.U" then "Agas" else 
+				if [Empresa] = "Larrabe Oilotegia, S.L." then "Larrabe" else 
+				if [Empresa] = "Granja Legaria, S.L." then "Legaria" else 
+				if [Empresa] = "El Granjero, S.L." then "Granjero"else null),
+				    #"Valor Substituído" = Table.ReplaceValue(Empresa,null,0,Replacer.ReplaceValue,{"Cantidad", "Bultos", "Docenas", "Imp. Unitario", "Imp. Bruto", "Imp. Bruto/Docenas", "Imp. Neto", "Imp. Neto / Docenas", "Total Dto.", "Total Linea", "Imp. Pdte", "Imp. Pdte. Fact", "Coste", "Margen"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído",{{"EMP", type text}, {"Margen", type number}, {"Coste", type number}, {"Imp. Pdte. Fact", type number}, {"Imp. Pdte", type number}, {"Total Linea", type number}, {"Total Dto.", type number}, {"Imp. Neto / Docenas", type number}, {"Imp. Neto", type number}, {"% Dto. Línea", type number}, {"Imp. Bruto/Docenas", type number}, {"Imp. Bruto", type number}, {"Imp. Unitario", type number}, {"Docenas", type number}, {"Bultos", type number}, {"Cantidad", type number}, {"Color Producto", type text}, {"Sub-Tamaño ", type text}, {"Tamaño", type text}, {"Forma Cría", type text}, {"Formato Envase", type text}, {"Tipo Producto", type text}, {"Producto", type text}, {"Cód. Producto", type text}, {"Categ. Producto", type text}, {"Provincia", type text}, {"Grupo Cliente", type text}, {"Cliente", type text}, {"Cód. Cliente", type text}, {"Comercial", type text}, {"Nº Línea", type text}, {"Tipo", type text}, {"Nº Doc", type text}, {"Tipo Documento", type text}, {"Competencia", type date}, {"Fecha", type date}, {"Empresa", type text}, {"Name", type text}}),
+				    #"Link Producto" = Table.AddColumn(#"Tipo Alterado", "LINK Producto", each [EMP] & [Cód. Producto]),
+				    #"Link Rappel" = Table.AddColumn(#"Link Producto", "LINK Rappel", each [EMP] & [Cód. Producto] &[Cód. Cliente]),
+				    #"Link Interco" = Table.AddColumn(#"Link Rappel", "CALC Interco", each Text.Combine({[EMP], [Cód. Cliente]}, ""), type text),
 				    
 				    #"Devolución" = Table.AddColumn(
-				    #"Link Rappel",
+				    #"Link Interco",
 				    "Devolucion",
 				    each 
 				        let
@@ -364,11 +435,13 @@ table 'DATOS POWER BI'
 				            dev2 = if [Imp. Bruto] < 0 then "Devolucion" else "Normal"
 				        in
 				            if dev1 = "Devolucion" or dev2 = "Devolucion" then "Devolucion" else "Normal"),
-				    #"Personalização Adicionada1" = Table.AddColumn(Devolución, "Docenas OK", each if [Devolucion] = "Normal" then [Docenas] else 0)
-				
-				
+				    #"Personalização Adicionada1" = Table.AddColumn(Devolución, "Docenas OK", each if [Devolucion] = "Normal" then [Docenas] else 0),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Docenas OK", type number}, {"Devolucion", type text}, {"LINK Rappel", type text}, {"LINK Producto", type text}}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Tipo Alterado1","ECOLOGICO","ECOLÓGICO",Replacer.ReplaceText,{"Forma Cría"}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Valor Substituído1", each ([Tipo Documento] <> "Pedido")),
+				    #"Remover Vazio" = Table.SelectRows(#"Linhas Filtradas1", each [Fecha] <> null and [Fecha] <> "")
 				in
-				    #"Personalização Adicionada1"
+				    #"Remover Vazio"
 				```
 
 	annotation PBI_NavigationStepName = Navegação

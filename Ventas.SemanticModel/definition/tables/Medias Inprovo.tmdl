@@ -1,0 +1,145 @@
+table 'Medias Inprovo'
+	lineageTag: d8476d2f-cb8e-4dfd-b183-9be0a4045767
+
+	column SEMANA
+		dataType: string
+		lineageTag: 31d3357e-6063-4261-88db-abcfa252b751
+		summarizeBy: none
+		sourceColumn: SEMANA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 5944bb38-8001-4e0d-bd62-ae3205b04875
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'SUELO''L'
+		dataType: double
+		lineageTag: a6e795f0-8942-4048-8b19-8456cccdecba
+		summarizeBy: sum
+		sourceColumn: SUELO'L
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'SUELO''M'
+		dataType: double
+		lineageTag: 243dcae7-c7a6-4dad-9623-de9f9da2de67
+		summarizeBy: sum
+		sourceColumn: SUELO'M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ECOLOGICO L/24'
+		dataType: double
+		lineageTag: 03683507-c3dc-44e7-8c0b-a16befad85a4
+		summarizeBy: sum
+		sourceColumn: ECOLOGICO L/24
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ECOLOGICOM/24
+		dataType: double
+		lineageTag: c1fefc66-abd1-4c05-afd3-835d0ba8f65b
+		summarizeBy: sum
+		sourceColumn: ECOLOGICOM/24
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column JAULAL
+		dataType: double
+		lineageTag: 011d2416-ec0f-4d1d-ad71-2a573baa60da
+		summarizeBy: sum
+		sourceColumn: JAULAL
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'JAULA M'
+		dataType: double
+		lineageTag: c7f0540b-d79d-446c-ac5f-96bc7a1bc5b0
+		summarizeBy: sum
+		sourceColumn: JAULA M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Tipo_ovo
+		dataType: string
+		lineageTag: a04e01dd-cbb1-4cef-9dae-8a0a61cdee27
+		summarizeBy: none
+		sourceColumn: Tipo_ovo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Preço
+		dataType: double
+		lineageTag: 7e7d8739-d4fd-48f2-91ba-3c126123ec39
+		summarizeBy: sum
+		sourceColumn: Preço
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Medias Inprovo' = m
+		mode: import
+		queryGroup: Fatos
+		source =
+				let
+				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Medias Inprovo"),
+				    #"Personalização Adicionada" = Table.AddColumn(Fonte, "Table", each Excel.Workbook([Content]){[Name="MEDIAS "]}[Data]),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Personalização Adicionada", each ([Extension] = ".xls")),
+				    #"C:\Users\bruno silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Medias Inprovo\_ENVIO MEDIAS PONDERADAS AÑO  2024-2025 - 4  SISTEMAS PRODUCCION xls" = #"Linhas Filtradas"{[#"Folder Path"="C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Medias Inprovo\",Name="ENVIO MEDIAS PONDERADAS AÑO  2024-2025 - 4  SISTEMAS PRODUCCION.xls"]}[Table],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"C:\Users\bruno silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Medias Inprovo\_ENVIO MEDIAS PONDERADAS AÑO  2024-2025 - 4  SISTEMAS PRODUCCION xls", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Column1", type text}, {"SEMANA", type text}, {"SUELO#(lf)'L", type number}, {"SUELO#(lf)'M", type number}, {"MEDIA SUELO", type number}, {"CAMPERO#(lf)", type number}, {"ECOLOGICO#(lf) L/24", type number}, {"ECOLOGICO#(lf)M/24", type number}, {"MEDIA ECOLOGICO", type number}, {"JAULA#(lf)L", type number}, {"JAULA #(lf)M", type number}, {"MEDIA JAULA (DOCENA )", type number}, {"JAULA INDUSTRIA (€/K)", type number}}),
+				    Personalizar1 = Table.UnpivotOtherColumns(#"Tipo Alterado", {"Column1", "SEMANA", "SUELO#(lf)'L", "SUELO#(lf)'M", "ECOLOGICO#(lf) L/24", "ECOLOGICO#(lf)M/24", "JAULA#(lf)L", "JAULA #(lf)M", "Column14", "Column15"}, "Attribute", "Value"),
+				    #"Colunas Renomeadas" = Table.RenameColumns(Personalizar1,{{"Attribute", "Tipo_ovo"}, {"Value", "Preço"}}),
+				
+				    // 🔁 Lista de substituições
+				        Substituicoes = {
+				            {"MEDIA SUELO", "SUELO"},
+				            {"MEDIA ECOLOGICO", "ECOLÓGICO"},
+				            {"MEDIA JAULA", "JAULA"},
+				            {"JAULA (DOCENA )", "JAULA"}
+				        },
+				
+				        // 🧠 Aplicando todas as substituições em um único passo
+				        #"Replaced Values" = List.Accumulate(
+				            Substituicoes,
+				            #"Colunas Renomeadas",
+				            (state, current) =>
+				                Table.ReplaceValue(
+				                    state,
+				                    current{0},
+				                    current{1},
+				                    Replacer.ReplaceText,
+				                    {"Tipo_ovo"}
+				                )
+				        ),
+				    #"Função Personalizada Invocada" = Table.AddColumn(#"Replaced Values", "Date", each FxSemana([SEMANA])),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Função Personalizada Invocada",{{"Date", type date}}),
+				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Tipo Alterado1",{"SEMANA", "SUELO#(lf)'L", "SUELO#(lf)'M", "ECOLOGICO#(lf) L/24", "ECOLOGICO#(lf)M/24", "JAULA#(lf)L", "JAULA #(lf)M", "Tipo_ovo", "Preço", "Date"})
+				in
+				    #"Outras Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

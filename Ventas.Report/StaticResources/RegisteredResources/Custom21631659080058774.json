@@ -1,0 +1,41 @@
+{
+  "name": "Custom",
+  "textClasses": {
+    "label": {
+      "color": "#000000",
+      "fontFace": "'Courier New'",
+      "fontSize": 8
+    },
+    "callout": {
+      "color": "#000000",
+      "fontFace": "'Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif",
+      "fontSize": 15
+    },
+    "title": {
+      "color": "#000000",
+      "fontFace": "'Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif",
+      "fontSize": 10
+    },
+    "header": {
+      "color": "#000000",
+      "fontFace": "'Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif",
+      "fontSize": 10
+    }
+  },
+  "dataColors": [
+    "#EC681C",
+    "#F28B16",
+    "#F6A219",
+    "#E5142F",
+    "#E044A7",
+    "#744EC2",
+    "#D9B300",
+    "#D64550"
+  ],
+  "bad": "#FF6D7C",
+  "neutral": "#C1C1C1",
+  "good": "#71FF97",
+  "minimum": "#FFB0C0",
+  "center": "#C8C8C8",
+  "maximum": "#69CFFF"
+}

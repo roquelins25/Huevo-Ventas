@@ -1,0 +1,29 @@
+expression FxSemana =
+		// fnSemanaIso.m
+		(SemanaTexto as text) as nullable date =>
+		let
+		    // Extrair ano e semana
+		    AnoText    = Text.Middle(SemanaTexto, 4, 4),
+		    SemanaText = Text.End(SemanaTexto, 2),
+		    Ano        = try Number.FromText(AnoText) otherwise null,
+		    Semana     = try Number.FromText(SemanaText) otherwise null,
+		
+		    // Calcular apenas se Ano e Semana são válidos
+		    Resultado = if (Ano <> null and Semana <> null) then
+		        let
+		            BaseDate = #date(Ano, 1, 4),                             // 4 de janeiro
+		            Ajuste   = Date.DayOfWeek(BaseDate, Day.Monday),         // desloca até segunda
+		            Primeira = Date.AddDays(BaseDate, -Ajuste),              // segunda da semana 1
+		            Data     = Date.AddDays(Primeira, (Semana - 1) * 7 + 2)  // mesmo +2 do seu DAX
+		        in
+		            Data
+		    else
+		        null
+		in
+		    Resultado
+	lineageTag: 75503948-88e6-49c6-9e23-5a8f7a694ec3
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Function
+

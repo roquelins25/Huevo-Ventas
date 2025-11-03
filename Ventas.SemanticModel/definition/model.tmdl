@@ -6,14 +6,30 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
+queryGroup Fatos
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup Dimensões
+
+	annotation PBI_QueryGroupOrder = 1
+
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["DATOS POWER BI","Master Data"]
+annotation PBI_QueryOrder = ["DATOS POWER BI","Productos Grupo","Intercos","Rappel","Medias Inprovo","Tamanos_Agrupados","tipo_huevo","_Medidas","FxSemana"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table 'DATOS POWER BI'
-ref table 'Master Data'
+ref table 'Productos Grupo'
+ref table Intercos
+ref table Rappel
+ref table 'Medias Inprovo'
+ref table 'CALENDARIO DAX'
+ref table Tamanos_Agrupados
+ref table tipo_huevo
+ref table _Medidas
+ref table xParametro
 
 ref cultureInfo pt-BR
 

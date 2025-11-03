@@ -1,0 +1,32 @@
+table Tamanos_Agrupados
+	lineageTag: 4d55ee22-c15c-4853-95db-8063646e6eab
+
+	column TAMANOS
+		dataType: string
+		lineageTag: dd906739-c088-4e37-b2c3-12387cd11600
+		summarizeBy: none
+		sourceColumn: TAMANOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TAMANOS AGRUPADO'
+		dataType: string
+		lineageTag: cb88a937-209c-4c0e-9015-76e8016af6a2
+		summarizeBy: none
+		sourceColumn: TAMANOS AGRUPADO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tamanos_Agrupados = m
+		mode: import
+		queryGroup: Dimensões
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W0kjKSczL1lTSUfIvKcov1g92VorViVZydgzRU3BScPMMBsqAOE7IwsGhzhjCTqgi/s4YRvq7oAt5OCfmFmAKYir09HNR8AEK+sB5vkCeL4wXFIRFQ3AwFsEIkCkREGN89FF42khsX7hdCHt89REu8A/zRzccZFswhIXhdWR7InzckTgRyGyYqlgA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [TAMANOS = _t, #"TAMANOS AGRUPADO" = _t])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,162 @@
+table 'CALENDARIO DAX'
+	lineageTag: 4941f779-0f19-44a7-b43d-10a15c78ae89
+
+	column Date
+		formatString: General Date
+		lineageTag: 488c49ba-f34b-42b8-bb5e-a78087ef9215
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		formatString: 0
+		lineageTag: f214371d-24a9-4656-8191-7774eb703492
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		formatString: 0
+		lineageTag: 389f26bb-8e40-4f83-a4d1-15825f6f91bb
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Mês]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome do Mês'
+		lineageTag: 16e55aa7-1ef5-4127-b61e-c7b220f4a7fc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nome do Mês]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mês Abrev'
+		lineageTag: 62f82792-bfd7-4500-bf93-c6b8b63e51c8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mês Abrev]
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre
+		lineageTag: fd35219a-3e6f-4fad-9ab0-959dd22d405a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column semestre
+		lineageTag: 3540e857-fe08-48c6-bbd0-7017549cf322
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [semestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		formatString: 0
+		lineageTag: b1393fa6-e99f-4b17-8b60-d3034e7785b7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Dia]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia/Mes
+		lineageTag: 5953b22a-c4ec-4649-a5ee-3caa95caa763
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Dia/Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasSemana
+		lineageTag: 993f87ae-7e27-4590-8e6f-ae598a4cd697
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DiasSemana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Atual'
+		lineageTag: 9fd5f2ac-262c-4a63-9762-b33755aac140
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes Atual]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano-Mes
+		lineageTag: 0a4de696-2b0e-46f0-9f59-91a14b8b7791
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ano-Mes]
+		sortByColumn: OrderBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderBy
+		formatString: 0
+		lineageTag: e80676d9-2175-427d-a46f-48107b72c39f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [OrderBy]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Numerosemana
+		formatString: 0
+		lineageTag: 6e676204-3be4-4363-9c20-0d6ece8587c0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Numerosemana]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'CALENDARIO DAX' = calculated
+		mode: import
+		source =
+				
+				var minAno = YEAR(DATE(2025,01,01)) //2026
+				var MaxAno = YEAR(MAX('DATOS POWER BI'[Fecha])) //2035
+				RETURN
+				ADDCOLUMNS(
+				    FILTER(
+				        CALENDARAUTO(),
+				        YEAR([Date]) >= minAno &&
+				        YEAR([Date]) <= MaxAno),
+				        "Ano", YEAR([Date]),
+				        "Mês", MONTH([Date]),
+				        "Nome do Mês", FORMAT([Date],"mmmm","PT-BR"),
+				        "Mês Abrev",UPPER(LEFT(FORMAT([Date], "mmm"), 1)) & LOWER(RIGHT(FORMAT([Date], "mmm"), 2)),
+				        "trimestre", CONCATENATE(QUARTER([Date]),"-Trimestre"),
+				        "semestre", SWITCH(
+				                        TRUE(),
+				                        MONTH([Date]) IN{1,2,3,4,5,6}, "1-Sem",
+				                        "2-Sem"),
+				        "Dia",DAY([Date]),
+				        "Dia/Mes", CONCATENATE( CONCATENATE( DAY( [Date] ), "-"), FORMAT([Date],"mmm") ),
+				        "DiasSemana",SWITCH(
+				            WEEKDAY([Date]),
+				            1,"Domingo",
+				            2,"Segunda",
+				            3,"Terça",
+				            4,"Quarta",
+				            5,"Quinta",
+				            6,"Sexta",
+				            7,"Sabado"),
+				        "Mes Atual", IF( YEAR( [Date] ) = YEAR( TODAY() ) && MONTH( [Date] ) = MONTH( TODAY() ), "S", "N" ),
+				        "Ano-Mes", UPPER(LEFT(FORMAT([Date], "mmm"), 1)) & LOWER(RIGHT(FORMAT([Date], "mmm"), 2)) & "-" & YEAR( [Date] ),
+				        "OrderBy", (YEAR( [Date] )*100) + MONTH( [Date] ),
+				        "Numerosemana", WEEKNUM( [Date],1)
+				    )
+
+	annotation PBI_Id = 16fda023be0e4c72a07fc8eefc9c1909
+

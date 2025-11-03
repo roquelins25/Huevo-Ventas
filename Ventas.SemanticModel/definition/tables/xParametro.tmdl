@@ -1,0 +1,49 @@
+table xParametro
+	lineageTag: 86955e3f-f42e-4048-b1e9-955ccb2bb2df
+
+	column xParametro
+		lineageTag: f521dcda-32df-48eb-a658-2cff4cc43c9b
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'xParametro Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'xParametro Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'xParametro Campos'
+		isHidden
+		lineageTag: 1e54341c-006f-400b-a2db-723e1faea209
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'xParametro Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'xParametro Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 375c2650-7fdf-4ddc-9ad2-acf922d1a2b6
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition xParametro = calculated
+		mode: import
+		source =
+				{
+				    ("Imp. Bruto", NAMEOF('_Medidas'[Total ImpBruto]), 0),
+				    ("Imp. Neto", NAMEOF('_Medidas'[Total ImpNeto]), 1),
+				    ("Docenas", NAMEOF('_Medidas'[Total Docenas/OK]), 2)
+				}
+
+	annotation PBI_Id = efd31aa1ed6c4068be939dcecfdf891a
+
