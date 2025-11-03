@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "8503d8da9da4d3b1f959",
+  "name": "49c7ff9bbbe78ef676a6",
   "position": {
-    "x": 554.81296758104736,
-    "y": 184.03990024937656,
-    "z": 2,
-    "height": 272.91770573566083,
-    "width": 700.24937655860344
+    "x": 245.08728179551116,
+    "y": 0,
+    "z": 1000,
+    "height": 275.61097256857852,
+    "width": 702.94264339152119,
+    "tabOrder": 11001
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -190,7 +191,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1496F2'"
+                      "Value": "'#6095FF'"
                     }
                   }
                 }
@@ -207,8 +208,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#F43D3D'"
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
                     }
                   }
                 }
@@ -252,32 +254,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'TopCenter'"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "italic": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
@@ -385,6 +361,18 @@
                   "Value": "true"
                 }
               }
+            },
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -482,6 +470,13 @@
                   "Value": "2L"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
             }
           },
           "selector": {
@@ -501,8 +496,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#F43D3D'"
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0.6
                     }
                   }
                 }
@@ -520,7 +516,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 1,
+                      "ColorId": 5,
                       "Percent": 0
                     }
                   }
@@ -530,7 +526,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -652,20 +648,6 @@
                   "Value": "'center'"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           }
         }
@@ -685,5 +667,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "84fcddc67330622d78c2"
 }

@@ -6,7 +6,8 @@
     "y": 325.88528678304237,
     "z": 1000,
     "height": 273.81546134663341,
-    "width": 464.13965087281792
+    "width": 464.13965087281792,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "columnChart",
@@ -249,20 +250,6 @@
   "parentGroupName": "d05f2a7665c57bff67a7",
   "filterConfig": {
     "filters": [
-      {
-        "name": "5cab0833c2de3bd73d53",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "CALENDARIO DAX"
-              }
-            },
-            "Property": "Ano-Mes"
-          }
-        },
-        "type": "Categorical"
-      },
       {
         "name": "93e190050e478bc4ee41",
         "field": {

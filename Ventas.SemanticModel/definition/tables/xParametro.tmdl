@@ -43,7 +43,8 @@ table xParametro
 				    ("Imp. Bruto", NAMEOF('_Medidas'[Total ImpBruto]), 0),
 				    ("Imp. Neto", NAMEOF('_Medidas'[Total ImpNeto]), 1),
 				    ("Docenas", NAMEOF('_Medidas'[Total Docenas/OK]), 2),
-				   ("Inprovo", NAMEOF('_Medidas'[Indice inprovo Ponderado]), 3)
+				    ("Precio Medio", NAMEOF('_Medidas'[Precio neto/docena]), 3),
+				   ("Inprovo", NAMEOF('_Medidas'[Indice inprovo Ponderado]), 4)
 				}
 
 	annotation PBI_Id = efd31aa1ed6c4068be939dcecfdf891a

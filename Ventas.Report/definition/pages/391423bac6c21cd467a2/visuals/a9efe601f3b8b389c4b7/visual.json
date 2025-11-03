@@ -4,10 +4,9 @@
   "position": {
     "x": 341.147132169576,
     "y": 25.137157107231918,
-    "z": 1,
+    "z": 9000,
     "height": 35.012468827930171,
-    "width": 371.67082294264338,
-    "tabOrder": 1
+    "width": 502.7431421446384
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -67,7 +66,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''_Medidas''[Total Docenas/OK]'"
+                                "Value": "'''_Medidas''[Total ImpBruto]'"
                               }
                             }
                           ]
@@ -95,7 +94,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''_Medidas''[Total Docenas/OK]'"
+                                      "Value": "'''_Medidas''[Total ImpBruto]'"
                                     }
                                   }
                                 ]
@@ -119,7 +118,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Docenas"
+                            "0": "Imp. Bruto"
                           }
                         ]
                       }
@@ -158,7 +157,7 @@
             "maxTiles": {
               "expr": {
                 "Literal": {
-                  "Value": "4L"
+                  "Value": "6L"
                 }
               }
             }

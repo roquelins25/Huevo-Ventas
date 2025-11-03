@@ -209,23 +209,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "d05f2a7665c57bff67a7",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7b5cace9a7284a0bedf7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DATOS POWER BI"
-              }
-            },
-            "Property": "EMP"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
-  }
+  "parentGroupName": "d05f2a7665c57bff67a7"
 }

@@ -110,7 +110,7 @@ table _Medidas
 	measure 'Premium Price' =
 			
 			// Comparação entre os preços antigos com Média Ponderada Online.
-			IF( ISBLANK( [Indice inprovo Ponderado] ), BLANK() ,DIVIDE( [Precio neto/docena velho] , [Indice inprovo Ponderado] ) -1 )
+			IF( ISBLANK( [Indice inprovo Ponderado] ), BLANK() ,DIVIDE( [Precio neto/docena] , [Indice inprovo Ponderado] ) -1 )
 		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Inprovo
 		lineageTag: 1cd3cc75-9e45-4d5b-95cd-dc8fea9bfe8e

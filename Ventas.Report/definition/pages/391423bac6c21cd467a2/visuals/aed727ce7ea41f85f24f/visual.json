@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "aed727ce7ea41f85f24f",
+  "position": {
+    "x": 307.93017456359104,
+    "y": 186.73316708229424,
+    "z": 2000,
+    "height": 513.5162094763092,
+    "width": 945.33665835411489,
+    "tabOrder": 11001
+  },
+  "visualGroup": {
+    "displayName": "Empresa",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

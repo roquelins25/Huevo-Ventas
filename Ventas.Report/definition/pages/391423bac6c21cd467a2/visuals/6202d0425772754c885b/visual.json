@@ -1,0 +1,401 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "6202d0425772754c885b",
+  "position": {
+    "x": 247.7805486284289,
+    "y": 0,
+    "z": 2000,
+    "height": 267.5311720698254,
+    "width": 697.55610972568581,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "decompositionTreeVisual",
+    "query": {
+      "queryState": {
+        "Analyze": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Total ImpBruto"
+                }
+              },
+              "queryRef": "_Medidas.Total ImpBruto",
+              "nativeQueryRef": "Imp. Bruto",
+              "displayName": "Imp. Bruto"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "xParametro"
+                    }
+                  },
+                  "Property": "xParametro"
+                }
+              },
+              "index": 0,
+              "length": 1
+            }
+          ]
+        },
+        "ExplainBy": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CALENDARIO DAX"
+                        }
+                      },
+                      "Hierarchy": "Ano Hierarquia"
+                    }
+                  },
+                  "Level": "Ano-Mes"
+                }
+              },
+              "queryRef": "CALENDARIO DAX.Ano Hierarquia.Ano-Mes",
+              "nativeQueryRef": "Ano Hierarquia Ano-Mes",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DATOS POWER BI"
+                    }
+                  },
+                  "Property": "Cliente"
+                }
+              },
+              "queryRef": "DATOS POWER BI.Cliente",
+              "nativeQueryRef": "Cliente",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Productos Grupo"
+                    }
+                  },
+                  "Property": "Sub-Tamaño y clasificación"
+                }
+              },
+              "queryRef": "Productos Grupo.Sub-Tamaño y clasificación",
+              "nativeQueryRef": "Sub-Tamaño y clasificación",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Productos Grupo"
+                    }
+                  },
+                  "Property": "Descripción"
+                }
+              },
+              "queryRef": "Productos Grupo.Descripción",
+              "nativeQueryRef": "Descripción",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Productos Grupo"
+                    }
+                  },
+                  "Property": "Gestión envases"
+                }
+              },
+              "queryRef": "Productos Grupo.Gestión envases",
+              "nativeQueryRef": "Gestión envases",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DATOS POWER BI"
+                    }
+                  },
+                  "Property": "Empresa"
+                }
+              },
+              "queryRef": "DATOS POWER BI.Empresa",
+              "nativeQueryRef": "Empresa",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tamanos_Agrupados"
+                    }
+                  },
+                  "Property": "TAMANOS"
+                }
+              },
+              "queryRef": "Tamanos_Agrupados.TAMANOS",
+              "nativeQueryRef": "TAMANOS",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tipo_huevo"
+                    }
+                  },
+                  "Property": "tipo_huevo"
+                }
+              },
+              "queryRef": "tipo_huevo.tipo_huevo",
+              "nativeQueryRef": "Tipo Huevo",
+              "active": false,
+              "displayName": "Tipo Huevo"
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "ExplainBy"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "CALENDARIO DAX.Ano Hierarquia.Ano-Mes"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CALENDARIO DAX"
+                    }
+                  },
+                  "Property": "Ano-Mes"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "DATOS POWER BI.Cliente"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Productos Grupo.Sub-Tamaño y clasificación"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Productos Grupo.Descripción"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Productos Grupo.Gestión envases"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "DATOS POWER BI.Empresa"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DATOS POWER BI"
+                    }
+                  },
+                  "Property": "Empresa"
+                }
+              }
+            ]
+          },
+          {
+            "queryRefs": [
+              "Tamanos_Agrupados.TAMANOS"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tamanos_Agrupados"
+                    }
+                  },
+                  "Property": "TAMANOS"
+                }
+              }
+            ]
+          },
+          {
+            "queryRefs": [
+              "tipo_huevo.tipo_huevo"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "tipo_huevo"
+                    }
+                  },
+                  "Property": "tipo_huevo"
+                }
+              }
+            ]
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "tree": [
+        {
+          "properties": {
+            "effectiveBarsPerLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "3L"
+                }
+              }
+            },
+            "density": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dense'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "levelHeader": [
+        {
+          "properties": {
+            "levelTitleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "levelTitleItalic": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "levelTitleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataLabels": [
+        {
+          "properties": {
+            "dataLabelFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "dataLabelBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "dataLabelFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "dataLabelFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "aed727ce7ea41f85f24f"
+}

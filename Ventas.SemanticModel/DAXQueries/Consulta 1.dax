@@ -31,3 +31,14 @@ DEFINE
             ABS( amount ) >= 1e3, "(#,#0,.00K)",
             "(#,#0.00)" )
         )
+
+// fx SELECT
+    FUNCTION fxSELECT = ( selectt : int64) =>
+        SWITCH(
+                selectt,
+                0, [Total ImpBruto],
+                1, [Total ImpNeto],
+                2, [Total Docenas/OK],
+                3, [Precio neto/docena],
+                4, [Indice inprovo Ponderado] )
+

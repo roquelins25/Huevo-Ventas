@@ -6,7 +6,8 @@
     "y": 49.915211970074765,
     "z": 5000,
     "height": 62.8428927680798,
-    "width": 254.06483790523689
+    "width": 254.06483790523689,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -273,20 +274,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "268c9610bc95015f46fd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "CALENDARIO DAX"
-              }
-            },
-            "Property": "Ano-Mes"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

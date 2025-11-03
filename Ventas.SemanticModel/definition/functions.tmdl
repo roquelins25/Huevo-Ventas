@@ -36,3 +36,30 @@ function fxCaixas = ```
 		```
 	lineageTag: 5f53ee01-1114-48e7-b797-31e6a26cdf61
 
+function fxMaisMenosCor =
+		( amount : numeric  , vMAX : numeric , vMIN: numeric ) =>
+		       IF( amount = vMAX , "maximo",
+		           IF( amount = vMIN , "minimo" )
+		       )
+	lineageTag: 2861ca61-1d5d-4493-bf7a-8f91ef12bff5
+
+function fxSELECT =
+		( selectt : int64) =>
+		        SWITCH(
+		                selectt,
+		                0, [Total ImpBruto],
+		                1, [Total ImpNeto],
+		                2, [Total Docenas/OK],
+		                3, [Precio neto/docena],
+		                4, [Indice inprovo Ponderado] )
+	lineageTag: 4e360f1f-7c91-4585-a5fe-b8a21d3a603f
+
+function fxCOR =
+		(vcorMax : string , vcorMin : string) =>
+		        SWITCH(
+		            SELECTEDVALUE( 'CALENDARIO DAX'[Ano-Mes] ),
+		            vcorMax , "Blue",
+		            vcorMin, "Red",
+		            "Grey" )
+	lineageTag: 9255d9d3-8c43-4826-b130-4ea09dea2ce6
+

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "0943a21d8f294c1775f3",
+  "position": {
+    "x": 315.328125,
+    "y": 156,
+    "z": 10000,
+    "height": 26,
+    "width": 336.5,
+    "tabOrder": 11003
+  },
+  "visualGroup": {
+    "displayName": "Button Color",
+    "groupMode": "ScaleMode"
+  }
+}

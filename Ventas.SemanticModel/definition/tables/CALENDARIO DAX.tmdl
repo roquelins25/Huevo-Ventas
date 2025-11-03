@@ -74,6 +74,7 @@ table 'CALENDARIO DAX'
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Dia/Mes]
+		sortByColumn: Mês
 
 		annotation SummarizationSetBy = Automatic
 
@@ -130,6 +131,10 @@ table 'CALENDARIO DAX'
 		level Ano-Mes
 			lineageTag: c42ea85e-4ed3-426f-a20e-101926b328fc
 			column: Ano-Mes
+
+		level Dia/Mes
+			lineageTag: 90062766-6956-41bf-a518-157066c0e04b
+			column: Dia/Mes
 
 	partition 'CALENDARIO DAX' = calculated
 		mode: import

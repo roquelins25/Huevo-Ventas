@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "52c07623ce9f8a38020e",
   "position": {
-    "x": 831.32169576059846,
-    "y": 465.93516209476309,
+    "x": 523.67463693706907,
+    "y": 281.89526184538653,
     "z": 2000,
     "height": 234.31421446384039,
-    "width": 423.74064837905235
+    "width": 423.74064837905235,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "hundredPercentStackedColumnChart",
@@ -59,12 +60,12 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total Docenas/OK"
+                  "Property": "Total ImpBruto"
                 }
               },
-              "queryRef": "_Medidas.Total Docenas/OK",
-              "nativeQueryRef": "Docenas",
-              "displayName": "Docenas"
+              "queryRef": "_Medidas.Total ImpBruto",
+              "nativeQueryRef": "Imp. Bruto",
+              "displayName": "Imp. Bruto"
             }
           ],
           "fieldParameters": [
@@ -411,5 +412,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "3e677743acb26b1dbad4"
 }

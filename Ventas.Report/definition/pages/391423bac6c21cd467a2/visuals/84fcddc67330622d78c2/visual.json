@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "84fcddc67330622d78c2",
+  "position": {
+    "x": 307.93017456359104,
+    "y": 181.34663341645884,
+    "z": 0,
+    "height": 518.90274314214457,
+    "width": 948.0299251870324,
+    "tabOrder": 11003
+  },
+  "visualGroup": {
+    "displayName": "Precio Medio",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

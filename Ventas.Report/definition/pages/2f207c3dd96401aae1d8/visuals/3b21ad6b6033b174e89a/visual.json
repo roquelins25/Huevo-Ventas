@@ -4,9 +4,10 @@
   "position": {
     "x": 262.97229219143577,
     "y": 0,
-    "z": 5,
+    "z": 1000,
     "height": 112.4433249370277,
-    "width": 240.30226700251887
+    "width": 240.30226700251887,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "slicer",
@@ -49,7 +50,49 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "d",
+                    "Entity": "DATOS POWER BI",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
+                                }
+                              },
+                              "Property": "Devolucion"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Normal'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     },

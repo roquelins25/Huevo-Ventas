@@ -2572,6 +2572,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.582
 			          }
+			        },
+			        {
+			          "Imp. Neto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3117,6 +3127,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.485
 			          }
+			        },
+			        {
+			          "%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3428,9 +3448,315 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "calendario_dax.ano_hierarquia.dia_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CALENDARIO DAX",
+			          "Hierarchy": "Ano Hierarquia",
+			          "HierarchyLevel": "Dia/Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia/me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dia me": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "medias_inprovo_has_tipo_huevo": {
+			      "Binding": {
+			        "ConceptualEntity": "Medias Inprovo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medias_inprovo": {
+			          "Target": {
+			            "Entity": "medias_inprovo"
+			          }
+			        },
+			        "tipo_huevo": {
+			          "Target": {
+			            "Entity": "tipo_huevo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medias_inprovo"
+			            },
+			            "Object": {
+			              "Role": "tipo_huevo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medias_inprovos_have_tipo_huevos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tipo_huevo"
+			            },
+			            "Object": {
+			              "Role": "medias_inprovo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tipo_huevos_have_medias_inprovos"
+			        }
+			      ]
+			    },
+			    "productos_grupo_has_tamanos_agrupado": {
+			      "Binding": {
+			        "ConceptualEntity": "Productos Grupo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "productos_grupo": {
+			          "Target": {
+			            "Entity": "productos_grupo"
+			          }
+			        },
+			        "tamanos_agrupado": {
+			          "Target": {
+			            "Entity": "tamanos_agrupado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "productos_grupo"
+			            },
+			            "Object": {
+			              "Role": "tamanos_agrupado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "productos_grupos_have_tamanos_agrupados"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tamanos_agrupado"
+			            },
+			            "Object": {
+			              "Role": "productos_grupo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tamanos_agrupados_have_productos_grupos"
+			        }
+			      ]
+			    },
+			    "productos_grupo_has_tipo_huevo": {
+			      "Binding": {
+			        "ConceptualEntity": "Productos Grupo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "productos_grupo": {
+			          "Target": {
+			            "Entity": "productos_grupo"
+			          }
+			        },
+			        "tipo_huevo": {
+			          "Target": {
+			            "Entity": "tipo_huevo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "productos_grupo"
+			            },
+			            "Object": {
+			              "Role": "tipo_huevo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "productos_grupos_have_tipo_huevos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tipo_huevo"
+			            },
+			            "Object": {
+			              "Role": "productos_grupo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tipo_huevos_have_productos_grupos"
+			        }
+			      ]
+			    },
+			    "datos_power_bi_has_calendario_dax": {
+			      "Binding": {
+			        "ConceptualEntity": "DATOS POWER BI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datos_power_bi": {
+			          "Target": {
+			            "Entity": "datos_power_bi"
+			          }
+			        },
+			        "calendario_dax": {
+			          "Target": {
+			            "Entity": "calendario_dax"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datos_power_bi"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datos_power_bi_have_calendario_dax"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax"
+			            },
+			            "Object": {
+			              "Role": "datos_power_bi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_dax_have_datos_power_bi"
+			        }
+			      ]
+			    },
+			    "datos_power_bi_has_rappel": {
+			      "Binding": {
+			        "ConceptualEntity": "DATOS POWER BI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datos_power_bi": {
+			          "Target": {
+			            "Entity": "datos_power_bi"
+			          }
+			        },
+			        "rappel": {
+			          "Target": {
+			            "Entity": "rappel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datos_power_bi"
+			            },
+			            "Object": {
+			              "Role": "rappel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datos_power_bi_have_rappels"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rappel"
+			            },
+			            "Object": {
+			              "Role": "datos_power_bi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "rappels_have_datos_power_bi"
+			        }
+			      ]
+			    },
+			    "datos_power_bi_has_interco": {
+			      "Binding": {
+			        "ConceptualEntity": "DATOS POWER BI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datos_power_bi": {
+			          "Target": {
+			            "Entity": "datos_power_bi"
+			          }
+			        },
+			        "interco": {
+			          "Target": {
+			            "Entity": "interco"
+			          },
+			          "Nouns": [
+			            {
+			              "CALC interco": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datos_power_bi"
+			            },
+			            "Object": {
+			              "Role": "interco"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datos_power_bi_have_interco"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "interco"
+			            },
+			            "Object": {
+			              "Role": "datos_power_bi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "interco_have_datos_power_bi"
+			        }
+			      ]
+			    },
 			    "datos_power_bi_has_productos_grupo": {
 			      "Binding": {
 			        "ConceptualEntity": "DATOS POWER BI"
@@ -7522,289 +7848,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "datos_power_bi_has_interco": {
-			      "Binding": {
-			        "ConceptualEntity": "DATOS POWER BI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "datos_power_bi": {
-			          "Target": {
-			            "Entity": "datos_power_bi"
-			          }
-			        },
-			        "interco": {
-			          "Target": {
-			            "Entity": "interco"
-			          },
-			          "Nouns": [
-			            {
-			              "CALC interco": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "datos_power_bi"
-			            },
-			            "Object": {
-			              "Role": "interco"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "datos_power_bi_have_interco"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "interco"
-			            },
-			            "Object": {
-			              "Role": "datos_power_bi"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "interco_have_datos_power_bi"
-			        }
-			      ]
-			    },
-			    "datos_power_bi_has_rappel": {
-			      "Binding": {
-			        "ConceptualEntity": "DATOS POWER BI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "datos_power_bi": {
-			          "Target": {
-			            "Entity": "datos_power_bi"
-			          }
-			        },
-			        "rappel": {
-			          "Target": {
-			            "Entity": "rappel"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "datos_power_bi"
-			            },
-			            "Object": {
-			              "Role": "rappel"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "datos_power_bi_have_rappels"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "rappel"
-			            },
-			            "Object": {
-			              "Role": "datos_power_bi"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "rappels_have_datos_power_bi"
-			        }
-			      ]
-			    },
-			    "datos_power_bi_has_calendario_dax": {
-			      "Binding": {
-			        "ConceptualEntity": "DATOS POWER BI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "datos_power_bi": {
-			          "Target": {
-			            "Entity": "datos_power_bi"
-			          }
-			        },
-			        "calendario_dax": {
-			          "Target": {
-			            "Entity": "calendario_dax"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "datos_power_bi"
-			            },
-			            "Object": {
-			              "Role": "calendario_dax"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "datos_power_bi_have_calendario_dax"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendario_dax"
-			            },
-			            "Object": {
-			              "Role": "datos_power_bi"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "calendario_dax_have_datos_power_bi"
-			        }
-			      ]
-			    },
-			    "productos_grupo_has_tipo_huevo": {
-			      "Binding": {
-			        "ConceptualEntity": "Productos Grupo"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "productos_grupo": {
-			          "Target": {
-			            "Entity": "productos_grupo"
-			          }
-			        },
-			        "tipo_huevo": {
-			          "Target": {
-			            "Entity": "tipo_huevo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "productos_grupo"
-			            },
-			            "Object": {
-			              "Role": "tipo_huevo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "productos_grupos_have_tipo_huevos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tipo_huevo"
-			            },
-			            "Object": {
-			              "Role": "productos_grupo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tipo_huevos_have_productos_grupos"
-			        }
-			      ]
-			    },
-			    "productos_grupo_has_tamanos_agrupado": {
-			      "Binding": {
-			        "ConceptualEntity": "Productos Grupo"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "productos_grupo": {
-			          "Target": {
-			            "Entity": "productos_grupo"
-			          }
-			        },
-			        "tamanos_agrupado": {
-			          "Target": {
-			            "Entity": "tamanos_agrupado"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "productos_grupo"
-			            },
-			            "Object": {
-			              "Role": "tamanos_agrupado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "productos_grupos_have_tamanos_agrupados"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tamanos_agrupado"
-			            },
-			            "Object": {
-			              "Role": "productos_grupo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tamanos_agrupados_have_productos_grupos"
-			        }
-			      ]
-			    },
-			    "medias_inprovo_has_tipo_huevo": {
-			      "Binding": {
-			        "ConceptualEntity": "Medias Inprovo"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "medias_inprovo": {
-			          "Target": {
-			            "Entity": "medias_inprovo"
-			          }
-			        },
-			        "tipo_huevo": {
-			          "Target": {
-			            "Entity": "tipo_huevo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "medias_inprovo"
-			            },
-			            "Object": {
-			              "Role": "tipo_huevo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "medias_inprovos_have_tipo_huevos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tipo_huevo"
-			            },
-			            "Object": {
-			              "Role": "medias_inprovo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tipo_huevos_have_medias_inprovos"
-			        }
-			      ]
-			    },
 			    "medias_inprovo_has_calendario_dax": {
 			      "Binding": {
 			        "ConceptualEntity": "Medias Inprovo"
@@ -7917,6 +7960,39 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "calendario_dax_ano_hierarquia_has_dia_me": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.ano_hierarquia": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia"
+			          }
+			        },
+			        "calendario_dax.ano_hierarquia.dia_me": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia.dia_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.ano_hierarquia"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.ano_hierarquia.dia_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ano_hierarquias_have_dia_me"
+			        }
+			      ]
+			    },
 			    "calendario_dax_ano_hierarquia_ano_has_calendario_dax_ano_hierarquia_anome": {
 			      "Binding": {
 			        "ConceptualEntity": "CALENDARIO DAX"
@@ -7980,6 +8056,72 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "anome_are_in_anos"
+			        }
+			      ]
+			    },
+			    "calendario_dax_ano_hierarquia_anome_has_calendario_dax_ano_hierarquia_dia_me": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.ano_hierarquia.anome": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia.anome"
+			          }
+			        },
+			        "calendario_dax.ano_hierarquia.dia_me": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia.dia_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.ano_hierarquia.anome"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.ano_hierarquia.dia_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anome_have_dia_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.ano_hierarquia.dia_me"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.ano_hierarquia.anome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dia_me_have_anome"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario_dax.ano_hierarquia.dia_me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario_dax.ano_hierarquia.anome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dia_me_are_in_anome"
 			        }
 			      ]
 			    }
