@@ -7,7 +7,7 @@ table _Medidas
 			SUM( 'DATOS POWER BI'[Imp. Bruto] )
 		lineageTag: 7474e786-38c0-48f4-aaac-26024f94626b
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		formatStringDefinition = fxRotuloGrfc( SELECTEDMEASURE() )
 
 	measure 'Total ImpNeto' =
 			
@@ -15,16 +15,15 @@ table _Medidas
 			SUM( 'DATOS POWER BI'[Imp. Neto] )
 		lineageTag: 3d4ad80c-060f-4942-9b94-f9f24857fd48
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		formatStringDefinition = fxRotuloGrfc( SELECTEDMEASURE() )
 
 	measure 'Total Docenas/OK' =
 			
 			//Soma total de Dezenas vendidas
 			SUM( 'DATOS POWER BI'[Docenas OK] )
-		formatString: #,0
 		lineageTag: 56e6ec7f-3f2a-496d-b5bc-80ebe67042b7
 
-		annotation PBI_FormatHint = {"isDecimal":true}
+		formatStringDefinition = fxCaixas( SELECTEDMEASURE() )
 
 	measure 'Precio Neto Final' = ```
 			

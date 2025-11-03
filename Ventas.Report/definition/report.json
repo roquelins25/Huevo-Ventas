@@ -9,6 +9,15 @@
         "page": "1.3.95"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Custom21631659080058774.json",
+      "reportVersionAtImport": {
+        "visual": "2.1.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -48,6 +57,22 @@
           "name": "CY24SU10",
           "path": "BaseThemes/CY24SU10.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "HOME8725575740317079.png",
+          "path": "HOME8725575740317079.png",
+          "type": "Image"
+        },
+        {
+          "name": "Custom21631659080058774.json",
+          "path": "Custom21631659080058774.json",
+          "type": "CustomTheme"
         }
       ]
     }

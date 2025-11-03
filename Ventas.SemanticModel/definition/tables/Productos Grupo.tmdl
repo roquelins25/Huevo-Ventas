@@ -83,6 +83,7 @@ table 'Productos Grupo'
 
 	partition 'Productos Grupo' = m
 		mode: import
+		queryGroup: Dimensões
 		source = ```
 				let
 				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Master Data"),

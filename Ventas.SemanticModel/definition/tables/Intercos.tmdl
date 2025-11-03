@@ -43,6 +43,7 @@ table Intercos
 
 	partition Intercos = m
 		mode: import
+		queryGroup: Dimensões
 		source =
 				let
 				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Generales - Master"),

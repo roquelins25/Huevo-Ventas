@@ -406,6 +406,7 @@ table 'DATOS POWER BI'
 
 	partition 'DATOS POWER BI' = m
 		mode: import
+		queryGroup: Fatos
 		source = ```
 				let
 				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\DATOS POWER BI"),
@@ -437,9 +438,10 @@ table 'DATOS POWER BI'
 				    #"Personalização Adicionada1" = Table.AddColumn(Devolución, "Docenas OK", each if [Devolucion] = "Normal" then [Docenas] else 0),
 				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Docenas OK", type number}, {"Devolucion", type text}, {"LINK Rappel", type text}, {"LINK Producto", type text}}),
 				    #"Valor Substituído1" = Table.ReplaceValue(#"Tipo Alterado1","ECOLOGICO","ECOLÓGICO",Replacer.ReplaceText,{"Forma Cría"}),
-				    #"Linhas Filtradas1" = Table.SelectRows(#"Valor Substituído1", each ([Tipo Documento] <> "Pedido"))
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Valor Substituído1", each ([Tipo Documento] <> "Pedido")),
+				    #"Remover Vazio" = Table.SelectRows(#"Linhas Filtradas1", each [Fecha] <> null and [Fecha] <> "")
 				in
-				    #"Linhas Filtradas1"
+				    #"Remover Vazio"
 				```
 
 	annotation PBI_NavigationStepName = Navegação

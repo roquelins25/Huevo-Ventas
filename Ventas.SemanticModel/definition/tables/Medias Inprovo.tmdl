@@ -100,6 +100,7 @@ table 'Medias Inprovo'
 
 	partition 'Medias Inprovo' = m
 		mode: import
+		queryGroup: Fatos
 		source =
 				let
 				    Fonte = Folder.Files("C:\Users\bruno.silva\Documents\bruno\PBXs\Exterior\Espanha\Dados\Medias Inprovo"),

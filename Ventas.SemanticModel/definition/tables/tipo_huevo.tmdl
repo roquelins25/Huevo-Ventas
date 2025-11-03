@@ -11,6 +11,7 @@ table tipo_huevo
 
 	partition tipo_huevo = m
 		mode: import
+		queryGroup: Dimensões
 		source =
 				let
 				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8nIM9XFUitWJVnJ19vc5PNnd09kfzHV29A1wDYKwg0NdfYCsWAA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [tipo_huevo = _t])
