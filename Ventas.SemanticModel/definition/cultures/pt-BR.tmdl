@@ -2746,6 +2746,16 @@ cultureInfo pt-BR
 			          "indice inprovo ponderado": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Inprovo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3123,6 +3133,16 @@ cultureInfo pt-BR
 			          "indice 0": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          ".": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3296,62 +3316,121 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "datos_power_bi_has_interco": {
-			      "Binding": {
-			        "ConceptualEntity": "DATOS POWER BI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "datos_power_bi": {
-			          "Target": {
-			            "Entity": "datos_power_bi"
-			          }
-			        },
-			        "interco": {
-			          "Target": {
-			            "Entity": "interco"
-			          },
-			          "Nouns": [
-			            {
-			              "CALC interco": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			    },
+			    "calendario_dax.ano_hierarquia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CALENDARIO DAX",
+			          "Hierarchy": "Ano Hierarquia"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "datos_power_bi"
-			            },
-			            "Object": {
-			              "Role": "interco"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "datos_power_bi_have_interco"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "interco"
-			            },
-			            "Object": {
-			              "Role": "datos_power_bi"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "interco_have_datos_power_bi"
+			          "ano hierarquia": {
+			            "State": "Generated"
+			          }
 			        }
 			      ]
 			    },
+			    "calendario_dax.ano_hierarquia.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CALENDARIO DAX",
+			          "Hierarchy": "Ano Hierarquia",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario_dax.ano_hierarquia.anome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "CALENDARIO DAX",
+			          "Hierarchy": "Ano Hierarquia",
+			          "HierarchyLevel": "Ano-Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano-me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ano me": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.entity__precio_neto_docena_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "_Precio neto/docena FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_precio neto/docena FormatString": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_precio neto": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "_ precio neto docena FormatString": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "docena FormatString": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.entity__indice_inprovo_ponderado_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "_Indice inprovo Ponderado FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_indice inprovo ponderado FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "datos_power_bi_has_productos_grupo": {
 			      "Binding": {
 			        "ConceptualEntity": "DATOS POWER BI"
@@ -3395,6 +3474,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "productos_grupos_have_datos_power_bi"
+			        }
+			      ]
+			    },
+			    "calendario_dax_has_ano_hierarquia": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax": {
+			          "Target": {
+			            "Entity": "calendario_dax"
+			          }
+			        },
+			        "calendario_dax.ano_hierarquia": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.ano_hierarquia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendario_dax_have_ano_hierarquias"
 			        }
 			      ]
 			    },
@@ -7410,6 +7522,59 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "datos_power_bi_has_interco": {
+			      "Binding": {
+			        "ConceptualEntity": "DATOS POWER BI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datos_power_bi": {
+			          "Target": {
+			            "Entity": "datos_power_bi"
+			          }
+			        },
+			        "interco": {
+			          "Target": {
+			            "Entity": "interco"
+			          },
+			          "Nouns": [
+			            {
+			              "CALC interco": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datos_power_bi"
+			            },
+			            "Object": {
+			              "Role": "interco"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datos_power_bi_have_interco"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "interco"
+			            },
+			            "Object": {
+			              "Role": "datos_power_bi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "interco_have_datos_power_bi"
+			        }
+			      ]
+			    },
 			    "datos_power_bi_has_rappel": {
 			      "Binding": {
 			        "ConceptualEntity": "DATOS POWER BI"
@@ -7683,6 +7848,138 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "calendario_dax_have_medias_inprovos"
+			        }
+			      ]
+			    },
+			    "calendario_dax_ano_hierarquia_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.ano_hierarquia": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia"
+			          }
+			        },
+			        "calendario_dax.ano_hierarquia.ano": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.ano_hierarquia"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.ano_hierarquia.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ano_hierarquias_have_anos"
+			        }
+			      ]
+			    },
+			    "calendario_dax_ano_hierarquia_has_anome": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.ano_hierarquia": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia"
+			          }
+			        },
+			        "calendario_dax.ano_hierarquia.anome": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia.anome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.ano_hierarquia"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.ano_hierarquia.anome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ano_hierarquias_have_anome"
+			        }
+			      ]
+			    },
+			    "calendario_dax_ano_hierarquia_ano_has_calendario_dax_ano_hierarquia_anome": {
+			      "Binding": {
+			        "ConceptualEntity": "CALENDARIO DAX"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario_dax.ano_hierarquia.ano": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia.ano"
+			          }
+			        },
+			        "calendario_dax.ano_hierarquia.anome": {
+			          "Target": {
+			            "Entity": "calendario_dax.ano_hierarquia.anome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.ano_hierarquia.ano"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.ano_hierarquia.anome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_anome"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario_dax.ano_hierarquia.anome"
+			            },
+			            "Object": {
+			              "Role": "calendario_dax.ano_hierarquia.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anome_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendario_dax.ano_hierarquia.anome"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendario_dax.ano_hierarquia.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anome_are_in_anos"
 			        }
 			      ]
 			    }
