@@ -65,14 +65,19 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "HOME8725575740317079.png",
-          "path": "HOME8725575740317079.png",
-          "type": "Image"
-        },
-        {
           "name": "Custom21631659080058774.json",
           "path": "Custom21631659080058774.json",
           "type": "CustomTheme"
+        },
+        {
+          "name": "HOME9559065121423664.png",
+          "path": "HOME9559065121423664.png",
+          "type": "Image"
+        },
+        {
+          "name": "Hevo_-_Home9676924990979584.png",
+          "path": "Hevo_-_Home9676924990979584.png",
+          "type": "Image"
         }
       ]
     }

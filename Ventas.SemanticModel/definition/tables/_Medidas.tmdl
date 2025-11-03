@@ -5,6 +5,7 @@ table _Medidas
 			
 			// Soma total de valores brutos
 			SUM( 'DATOS POWER BI'[Imp. Bruto] )
+		displayFolder: Totais
 		lineageTag: 7474e786-38c0-48f4-aaac-26024f94626b
 
 		formatStringDefinition = fxRotuloGrfc( SELECTEDMEASURE() )
@@ -13,6 +14,7 @@ table _Medidas
 			
 			// Soma de valores Liquidos
 			SUM( 'DATOS POWER BI'[Imp. Neto] )
+		displayFolder: Totais
 		lineageTag: 3d4ad80c-060f-4942-9b94-f9f24857fd48
 
 		formatStringDefinition = fxRotuloGrfc( SELECTEDMEASURE() )
@@ -21,6 +23,7 @@ table _Medidas
 			
 			//Soma total de Dezenas vendidas
 			SUM( 'DATOS POWER BI'[Docenas OK] )
+		displayFolder: Totais
 		lineageTag: 56e6ec7f-3f2a-496d-b5bc-80ebe67042b7
 
 		formatStringDefinition = fxCaixas( SELECTEDMEASURE() )
@@ -36,6 +39,7 @@ table _Medidas
 			RETURN
 			IF( ABS( [Total ImpNeto] ) > ABS( vNETO_NETO ), vNETO_NETO , [Total ImpNeto] )
 			```
+		displayFolder: Precios
 		lineageTag: 85499ec1-bd6d-4f62-9ed8-54c032b2da25
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -60,9 +64,10 @@ table _Medidas
 			RETURN
 			DIVIDE( vNETO, vDOCENAS, 0 )
 			```
+		displayFolder: Precios
 		lineageTag: 1e59ef41-de65-46c5-976a-220896a627d8
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		formatStringDefinition = fxRotuloGrfc( SELECTEDMEASURE() )
 
 	measure 'Indice inprovo Ponderado' = ```
 			
@@ -74,8 +79,10 @@ table _Medidas
 			RETURN
 			DIVIDE( _DOCEAS, [Total Docenas/OK], 0 )
 			```
-		formatString: #,0.00
+		displayFolder: Inprovo
 		lineageTag: a9f5e79c-4eb5-42f4-90f6-8a5426ab3e4e
+
+		formatStringDefinition = fxRotuloGrfc( SELECTEDMEASURE() )
 
 	measure Media = ```
 			
@@ -85,7 +92,38 @@ table _Medidas
 			_Media
 			```
 		formatString: 0.0000
+		displayFolder: Totais
 		lineageTag: 71b7ffe5-190c-456f-87a0-a120d6aa93c9
+
+	measure 'Precio neto/docena velho' = ```
+			
+			// Preço medio antigo e direto
+			IFERROR( DIVIDE( [Precio Neto Final] , [Total Docenas/OK] ), BLANK() )
+			
+			```
+		displayFolder: Precios
+		lineageTag: 78d32080-14a4-4050-a78b-9abe200e856e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Premium Price' =
+			
+			// Comparação entre os preços antigos com Média Ponderada Online.
+			IF( ISBLANK( [Indice inprovo Ponderado] ), BLANK() ,DIVIDE( [Precio neto/docena velho] , [Indice inprovo Ponderado] ) -1 )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Inprovo
+		lineageTag: 1cd3cc75-9e45-4d5b-95cd-dc8fea9bfe8e
+
+	measure 'Indice 0' =
+			
+			IF( ISBLANK( [Indice inprovo Ponderado] ) , BLANK(), 0 )
+		formatString: 0
+		lineageTag: ae2b438a-779a-4a09-981d-6e305362725a
+
+	measure 'Titulo Parametro' =
+			
+			MAX( xParametro[xParametro] ) & " por Empresa"
+		lineageTag: 52f03159-5c86-455a-9b8f-4e27d12c3100
 
 	partition _Medidas = m
 		mode: import

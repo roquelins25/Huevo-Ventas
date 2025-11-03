@@ -3,9 +3,9 @@
   "name": "e141c7a861d2beb24291",
   "position": {
     "x": 0,
-    "y": 548.61460957178838,
+    "y": 623.87909319899245,
     "z": 3,
-    "height": 171.38539042821156,
+    "height": 96.12090680100755,
     "width": 1280.4030226700252
   },
   "visual": {
@@ -31,25 +31,6 @@
             }
           ]
         },
-        "Rows": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "tipo_huevo"
-                    }
-                  },
-                  "Property": "tipo_huevo"
-                }
-              },
-              "queryRef": "tipo_huevo.tipo_huevo",
-              "nativeQueryRef": "tipo_huevo",
-              "active": true
-            }
-          ]
-        },
         "Values": {
           "projections": [
             {
@@ -60,33 +41,105 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Media"
+                  "Property": "Premium Price"
                 }
               },
-              "queryRef": "_Medidas.Medida 2",
-              "nativeQueryRef": "Media"
+              "queryRef": "_Medidas.Premium Price",
+              "nativeQueryRef": "Premium Price"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Precio neto/docena velho"
+                }
+              },
+              "queryRef": "_Medidas.Precio neto/docena velho",
+              "nativeQueryRef": "Precio neto/docena velho"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Indice inprovo Ponderado"
+                }
+              },
+              "queryRef": "_Medidas.Indice inprovo Ponderado",
+              "nativeQueryRef": "Indice inprovo Ponderado"
             }
           ]
         }
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Rows"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "tipo_huevo.tipo_huevo"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "valuesOnRow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
-        ],
-        "root": {}
-      }
-    ],
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "3L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Precio neto/docena velho"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "3L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Indice inprovo Ponderado"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "173.2544074423356D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Premium Price"
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   }
 }

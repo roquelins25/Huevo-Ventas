@@ -120,6 +120,17 @@ table 'CALENDARIO DAX'
 
 		annotation SummarizationSetBy = Automatic
 
+	hierarchy 'Ano Hierarquia'
+		lineageTag: 40c1733d-905f-446a-8ca2-eede718cd856
+
+		level Ano
+			lineageTag: 51000977-eca2-4280-86e8-c9978417fc8f
+			column: Ano
+
+		level Ano-Mes
+			lineageTag: c42ea85e-4ed3-426f-a20e-101926b328fc
+			column: Ano-Mes
+
 	partition 'CALENDARIO DAX' = calculated
 		mode: import
 		source =
@@ -134,26 +145,26 @@ table 'CALENDARIO DAX'
 				        YEAR([Date]) <= MaxAno),
 				        "Ano", YEAR([Date]),
 				        "Mês", MONTH([Date]),
-				        "Nome do Mês", FORMAT([Date],"mmmm","PT-BR"),
-				        "Mês Abrev",UPPER(LEFT(FORMAT([Date], "mmm"), 1)) & LOWER(RIGHT(FORMAT([Date], "mmm"), 2)),
+				        "Nome do Mês", FORMAT([Date],"mmmm","es-ES"),
+				        "Mês Abrev",UPPER(LEFT(FORMAT([Date], "mmm","es-ES"), 1)) & LOWER(RIGHT(FORMAT([Date], "mmm","es-ES"), 2)),
 				        "trimestre", CONCATENATE(QUARTER([Date]),"-Trimestre"),
 				        "semestre", SWITCH(
 				                        TRUE(),
 				                        MONTH([Date]) IN{1,2,3,4,5,6}, "1-Sem",
 				                        "2-Sem"),
 				        "Dia",DAY([Date]),
-				        "Dia/Mes", CONCATENATE( CONCATENATE( DAY( [Date] ), "-"), FORMAT([Date],"mmm") ),
+				        "Dia/Mes", CONCATENATE( CONCATENATE( DAY( [Date] ), "-"), FORMAT([Date],"mmm","es-ES") ),
 				        "DiasSemana",SWITCH(
 				            WEEKDAY([Date]),
 				            1,"Domingo",
-				            2,"Segunda",
-				            3,"Terça",
-				            4,"Quarta",
-				            5,"Quinta",
-				            6,"Sexta",
-				            7,"Sabado"),
+				            2,"Lunes",
+				            3,"Martes",
+				            4,"Miércoles",
+				            5,"Jueves",
+				            6,"Viernes",
+				            7,"Sábado"),
 				        "Mes Atual", IF( YEAR( [Date] ) = YEAR( TODAY() ) && MONTH( [Date] ) = MONTH( TODAY() ), "S", "N" ),
-				        "Ano-Mes", UPPER(LEFT(FORMAT([Date], "mmm"), 1)) & LOWER(RIGHT(FORMAT([Date], "mmm"), 2)) & "-" & YEAR( [Date] ),
+				        "Ano-Mes", UPPER(LEFT(FORMAT([Date], "mmm","es-ES"), 1)) & LOWER(RIGHT(FORMAT([Date], "mmm","es-ES"), 2)) & "-" & YEAR( [Date] ),
 				        "OrderBy", (YEAR( [Date] )*100) + MONTH( [Date] ),
 				        "Numerosemana", WEEKNUM( [Date],1)
 				    )

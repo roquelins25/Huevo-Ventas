@@ -4,15 +4,15 @@ function fxRotuloGrfc = ```
 		        amount > 0 ,
 		        SWITCH(
 		            TRUE(),
-		            amount >= 1e6, "R$ #,#0,,.00M",
-		            amount >= 1e3, "R$ #,#0,.00K",
-		            "R$ #,#0.00" 
+		            amount >= 1e6, "€ #,#0,,.00M",
+		            amount >= 1e3, "€ #,#0,.00K",
+		            "€ #,#0.00" 
 		        ),
 		        SWITCH(
 		            TRUE(),
-		            ABS( amount ) >= 1e6, "(R$ #,#0,,.00M)",
-		            ABS( amount ) >= 1e3, "(R$ #,#0,.00K)",
-		            "(R$ #,#0.00)" )
+		            ABS( amount ) >= 1e6, "(€ #,#0,,.00M)",
+		            ABS( amount ) >= 1e3, "(€ #,#0,.00K)",
+		            "(€ #,#0.00)" )
 		        )
 		```
 	lineageTag: 11b6f7b0-29cb-45d2-ac97-600267f4cee5

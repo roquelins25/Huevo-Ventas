@@ -5,32 +5,13 @@
     "x": 0,
     "y": 262.06549118387909,
     "z": 2,
-    "height": 286.54911838790929,
-    "width": 1046.4483627204029
+    "height": 325.54156171284632,
+    "width": 593.04785894206543
   },
   "visual": {
     "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Columns": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DATOS POWER BI"
-                    }
-                  },
-                  "Property": "Forma Cria Final"
-                }
-              },
-              "queryRef": "DATOS POWER BI.Forma Cria Final",
-              "nativeQueryRef": "Forma Cria Final",
-              "active": true
-            }
-          ]
-        },
         "Rows": {
           "projections": [
             {
@@ -79,6 +60,34 @@
               },
               "queryRef": "_Medidas.docenas empresas",
               "nativeQueryRef": "Indice inprovo Ponderado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Total ImpBruto"
+                }
+              },
+              "queryRef": "_Medidas.Total ImpBruto",
+              "nativeQueryRef": "Total ImpBruto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Total ImpNeto"
+                }
+              },
+              "queryRef": "_Medidas.Total ImpNeto",
+              "nativeQueryRef": "Total ImpNeto"
             }
           ]
         }

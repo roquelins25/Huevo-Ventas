@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "0aed35a93dc581cd5d09",
   "position": {
-    "x": 30.523690773067329,
-    "y": 120.29925187032418,
+    "x": 0,
+    "y": 0,
     "z": 0,
-    "height": 289.07730673316706,
-    "width": 263.04239401496261
+    "height": 317.80548628428926,
+    "width": 250.47381546134662
   },
   "visual": {
     "visualType": "pieChart",
@@ -41,11 +41,28 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total Docenas/OK"
+                  "Property": "Total ImpBruto"
                 }
               },
-              "queryRef": "_Medidas.Total Docenas/OK",
-              "nativeQueryRef": "Total Docenas/OK"
+              "queryRef": "_Medidas.Total ImpBruto",
+              "nativeQueryRef": "Imp. Bruto",
+              "displayName": "Imp. Bruto"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "xParametro"
+                    }
+                  },
+                  "Property": "xParametro"
+                }
+              },
+              "index": 0,
+              "length": 1
             }
           ]
         }
@@ -60,7 +77,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Total Docenas/OK"
+                "Property": "Total ImpBruto"
               }
             },
             "direction": "Descending"
@@ -69,14 +86,86 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'outside'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
           "properties": {
             "text": {
               "expr": {
-                "Literal": {
-                  "Value": "'Total Docena por Empresas'"
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Titulo Parametro"
                 }
               }
             },
@@ -93,11 +182,50 @@
                   "Value": "true"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "d05f2a7665c57bff67a7",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7b5cace9a7284a0bedf7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DATOS POWER BI"
+              }
+            },
+            "Property": "EMP"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
