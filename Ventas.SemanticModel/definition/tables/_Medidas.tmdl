@@ -46,7 +46,7 @@ table _Medidas
 
 	measure 'Precio neto/docena' = ```
 			
-			// Colocado docenas <> 0 pois existe vendas que nao são OVOS qu gera valor financeiro mas nao gera volume
+			// Colocado docenas <> 0 pois existe vendas que nao são OVOS qu gera valor financeiro mas nao gera volume, Preço Médio
 			VAR vNETO = 
 			CALCULATE(
 			    [Precio Neto Final],
@@ -86,13 +86,14 @@ table _Medidas
 
 	measure Media = ```
 			
+			// Cria a Media Geral Online
 			VAR _Media = 
 			AVERAGE( 'Medias Inprovo'[Preço] )
 			RETURN
 			_Media
 			```
 		formatString: 0.0000
-		displayFolder: Totais
+		displayFolder: Inprovo
 		lineageTag: 71b7ffe5-190c-456f-87a0-a120d6aa93c9
 
 	measure 'Precio neto/docena velho' = ```
@@ -116,13 +117,17 @@ table _Medidas
 
 	measure 'Indice 0' =
 			
+			// Cria uma linha com resultado 0
 			IF( ISBLANK( [Indice inprovo Ponderado] ) , BLANK(), 0 )
 		formatString: 0
+		displayFolder: Outros
 		lineageTag: ae2b438a-779a-4a09-981d-6e305362725a
 
 	measure 'Titulo Parametro' =
 			
+			// Medida a ser utlizada para Titulos, Utiliza a medida que esta fazendo + Empresa
 			MAX( xParametro[xParametro] ) & " por Empresa"
+		displayFolder: Outros
 		lineageTag: 52f03159-5c86-455a-9b8f-4e27d12c3100
 
 	partition _Medidas = m
